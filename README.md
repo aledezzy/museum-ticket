@@ -1,4 +1,4 @@
-# Progetto UDA-
+# Progetto UDA
 
 ## Gestione della biglietteria di un museo
 
