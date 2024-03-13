@@ -41,3 +41,5 @@ dicembre di un determinato anno;
 - lo story board redatto secondo il modello IFML
 - la realizzazione delle principali funzionalità dell’applicazione: autenticazione, CRUD per le
 tabelle, pagine corrispondenti alle query del punto 2d.
+
+https://www.studytonight.com/apache-guide/how-to-add-multiple-subdomains-to-an-apache-server
