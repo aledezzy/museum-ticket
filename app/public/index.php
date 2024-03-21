@@ -1,3 +1,12 @@
+<?php
+// Load Config
+require_once '../config/config.php';
+
+// Autoload Core Libraries
+
+
+?>
+
 <!doctype html>
 <html lang="it">
   <head>
