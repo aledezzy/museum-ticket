@@ -1,6 +1,9 @@
 <?php
 // Load Config
 require_once '../config/config.php';
+require_once '../config/database.php';
+//new class connection
+$conn = Connection::new();
 
 // Autoload Core Libraries
 
