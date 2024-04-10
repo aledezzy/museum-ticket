@@ -73,7 +73,7 @@
 								<?php endif; ?>
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="<?=ROOT?>checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="<?=ROOT?>cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="<?=ROOT?>cart"><i class="fa fa-shopping-cart"></i> Carrello</a></li>
 								
 								<?php if(isset($data['user_data'])): ?>
 									<li><a href="<?=ROOT?>logout"><i class="fa fa-lock"></i> Logout</a></li>
@@ -106,7 +106,7 @@
 								<li><a href="<?=ROOT?>index" class="<?= $page_title == "Home" ? "active" : ""; ?>">Home</a></li>
 								<li class="dropdown"><a href="<?=ROOT?>shop" class="<?= $page_title == "Shop" ? "active" : ""; ?>">Shop</a></li> 
 								<li class="dropdown"><a href="<?=ROOT?>blog" class="<?= $page_title == "Blog" ? "active" : ""; ?>">Blog</a></li> 
-								<li><a href="<?=ROOT?>contact-us" class="<?= $page_title == "Contact-us" ? "active" : ""; ?>">Contact</a></li>
+								<li><a href="<?=ROOT?>contact-us" class="<?= $page_title == "Contact-us" ? "active" : ""; ?>">Contatti</a></li>
 							</ul>
 						</div>
 					</div>

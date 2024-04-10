@@ -24,16 +24,16 @@
 	    				<?php endif;?>
 				    	<form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
 				            <div class="form-group col-md-6">
-				                <input type="text" name="name" class="form-control" required="required" placeholder="Name" value="<?=isset($POST['name'])? $POST['name']:''?>">
+				                <input type="text" name="name" class="form-control" required="required" placeholder="Nome" value="<?=isset($POST['name'])? $POST['name']:''?>">
 				            </div>
 				            <div class="form-group col-md-6">
 				                <input type="email" name="email" class="form-control" required="required" placeholder="Email" value="<?=isset($POST['email'])? $POST['email']:''?>">
 				            </div>
 				            <div class="form-group col-md-12">
-				                <input type="text" name="subject" class="form-control" required="required" placeholder="Subject" value="<?=isset($POST['subject'])? $POST['subject']:''?>">
+				                <input type="text" name="subject" class="form-control" required="required" placeholder="Oggetto" value="<?=isset($POST['subject'])? $POST['subject']:''?>">
 				            </div>
 				            <div class="form-group col-md-12">
-				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your Message Here"><?=isset($POST['subject'])? $POST['subject']:''?></textarea>
+				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Tuo messaggio..."><?=isset($POST['subject'])? $POST['subject']:''?></textarea>
 				            </div>                        
 				            <div class="form-group col-md-12">
 				                <input type="submit" class="btn btn-primary pull-right" value="Submit">
