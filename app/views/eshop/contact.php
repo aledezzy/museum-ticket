@@ -2,17 +2,17 @@
 
 	 <div id="contact-page" class="container">
     	<div class="bg">
-	    	<div class="row">    		
-	    		<div class="col-sm-12">    			   			
-					<h2 class="title text-center">Contact <strong>Us</strong></h2>    			    				    				
+	    	<div class="row">
+	    		<div class="col-sm-12">
+					<h2 class="title text-center"><strong>Contatta</strong></h2>
 					
-				</div>			 		
+				</div>
 			</div> 
  			
     		<div class="row">  	
 	    		<div class="col-sm-8">
 	    			<div class="contact-form">
-	    				<h2 class="title text-center">Get In Touch</h2>
+	    				<h2 class="title text-center">Contattaci</h2>
 
 	    				<?php if(is_array($errors) && count($errors)>0):?>
 	    					<?php foreach ($errors as $error):?>
@@ -34,9 +34,9 @@
 				            </div>
 				            <div class="form-group col-md-12">
 				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Tuo messaggio..."><?=isset($POST['subject'])? $POST['subject']:''?></textarea>
-				            </div>                        
+				            </div>
 				            <div class="form-group col-md-12">
-				                <input type="submit" class="btn btn-primary pull-right" value="Submit">
+				                <input type="submit" class="btn btn-primary pull-right" value="Invia">
 				            </div>
 				        </form>
 	    			</div>
@@ -65,9 +65,9 @@
 							</ul>
 	    				</div>
 	    			</div>
-    			</div>    			
-	    	</div>  
-    	</div>	
+    			</div>
+	    	</div>
+    	</div>
     </div><!--/#contact-page-->
 
 <?php $this->view("footer",$data); ?>

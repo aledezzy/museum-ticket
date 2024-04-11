@@ -61,7 +61,8 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="<?=ROOT?>"><img src="<?= ASSETS . THEME ?>images/home/logo.png" alt="" /></a>
+							<img src="" alt="" sizes="" srcset="">
+							<a href="<?=ROOT?>"><img src="<?= ASSETS . THEME ?>images/home/logoDani.png" alt=""/></a>
 						</div>
 						 
 					</div>
