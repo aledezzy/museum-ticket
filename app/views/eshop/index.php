@@ -6,11 +6,11 @@
 		<div class="container">
 			<div class="row">
 				
-				<?php $this->view("sidebar.inc",$data); ?>
+				<?php /*$this->view("sidebar.inc",$data);*/ ?>
 				
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Featured Items</h2>
+						<h2 class="title text-center">Biglietti in evidenza</h2>
 						
 						<?php if(is_array($ROWS)): ?>
 						<?php foreach($ROWS as $row): ?>
@@ -59,7 +59,7 @@
 					<?php endif;?>
 
 					<div class="recommended_items"><!--recommended_items-->
-						<h2 class="title text-center">recommended items</h2>
+						<h2 class="title text-center">Butta un occhio qui, bischero</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">

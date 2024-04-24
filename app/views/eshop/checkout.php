@@ -77,15 +77,10 @@
 									 		<?php endforeach;?>
 									 	<?php endif;?>
 									</select><br><br>
-									<select name="state" value="<?=$state?>" class="js-state" required>
-										<?php if($state == ""){
-											echo "<option>-- State / Province / Region --</option>";
-										}else{
-											echo "<option>$state</option>";
-										}?>
-										
-										
-									</select><br><br>
+									
+									<input name="state"value="<?=$state?>" class="form-control" type="text" placeholder="Regione *" autofocus="autofocus" required><br>
+
+									
 									 
 									<input name="home_phone" value="<?=$home_phone?>" class="form-control" type="text" placeholder="Home Phone"><br>
 									<input name="mobile_phone" value="<?=$mobile_phone?>" class="form-control" type="text" placeholder="Mobile Phone *" required><br>

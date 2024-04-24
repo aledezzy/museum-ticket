@@ -13,6 +13,9 @@ Class User
 		$data['email'] 		= trim($POST['email']);
 		$data['password'] 	= trim($POST['password']);
 		$password2 			= trim($POST['password2']);
+		$data['is-dis']	    = trim($POST['is-disabile']);
+		$data['dis-des']	= trim($POST['dis-descrizione']);
+		//$data['dis-file']	= $POST['dis-file'];
 
 		if(empty($data['email']) || !preg_match("/^[a-zA-Z_-]+@[a-zA-Z]+.[a-zA-Z]+$/", $data['email']))
 		{

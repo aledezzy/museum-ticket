@@ -4,8 +4,8 @@
 		<div class="container">
 			<div class="row">
 				
-				<?php $this->view("sidebar.inc",$data); ?>
-
+				<?php //$this->view("sidebar.inc",$data); ?>
+					
 				<div class="col-sm-9">
 					<div class="blog-post-area">
 						<h2 class="title text-center">Latest From our Blog</h2>

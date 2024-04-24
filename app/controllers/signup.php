@@ -1,6 +1,6 @@
 <?php 
 
-Class Signup extends Controller
+class Signup extends Controller
 {
 
 	public function index()

@@ -134,10 +134,6 @@
                       	 </form>
                       	 	
                       	 <!--end searchbox-->
-
-		<div class="shipping text-center"><!--shipping-->
-			<img src="<?= ASSETS . THEME ?>images/home/shipping.jpg" alt="" />
-		</div><!--/shipping-->
 	
 	</div>
 </div>

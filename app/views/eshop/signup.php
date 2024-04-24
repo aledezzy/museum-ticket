@@ -15,6 +15,22 @@
 							<input name="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '';?>" type="email" placeholder="Email Address"/>
 							<input name="password" type="password" placeholder="Password"/>
 							<input name="password2" type="password" placeholder="Retype Password"/>
+							<div id="disabile">
+							<select name="specialcat">
+								<option>Nessuna</option>
+								<?php
+									$db = Database::getInstance();
+									$qury = "select id, description from specialcat";
+									$disabilities = $db -> read($qury);
+									// foreach($disabilities as $k => $dis){
+									// echo "<option value = \"" . $dis['id'] . "\">" . $dis['description'] . "</option>";
+									// }
+								?>
+							</select>
+							</div>
+							<?php
+							print_r($disabilities);
+							?>
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->

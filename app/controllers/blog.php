@@ -36,13 +36,13 @@ Class Blog extends Controller
 
 		$data['page_title'] = "Blog";
 
-		if($ROWS){
+		/*if($ROWS){
 			foreach ($ROWS as $key => $row) {
 				# code...
 				$ROWS[$key]->image = $image_class->get_thumb_blog_post($ROWS[$key]->image);
 				$ROWS[$key]->user_data = $User->get_user($ROWS[$key]->user_url);
 			}
-		}
+		}*/
 
 		//get all categories
 		$category = $this->load_model('category');
