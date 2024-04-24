@@ -19,22 +19,22 @@ Class User
 
 		if(empty($data['email']) || !preg_match("/^[a-zA-Z_-]+@[a-zA-Z]+.[a-zA-Z]+$/", $data['email']))
 		{
-			$this->error .= "Please enter a valid email <br>";
+			$this->error .= "Inserisci una mail valida <br>";
 		}
 
 		if(empty($data['name']) || !preg_match("/^[a-zA-Z]+$/", $data['name']))
 		{
-			$this->error .= "Please enter a valid name <br>";
+			$this->error .= "Inserisci un nome valido <br>";
 		}
 
 		if($data['password'] !== $password2)
 		{
-			$this->error .= "Passwords do not match <br>";
+			$this->error .= "la password non corrisponde <br>";
 		}
 
 		if(strlen($data['password']) < 4)
 		{
-			$this->error .= "Password must be atleast 4 characters long <br>";
+			$this->error .= "La password deve essere lunga minimo 4 caratteri <br>";
 		}
 
 		//check if email already exists
@@ -89,12 +89,12 @@ Class User
  
 		if(empty($data['email']) || !preg_match("/^[a-zA-Z_-]+@[a-zA-Z]+.[a-zA-Z]+$/", $data['email']))
 		{
-			$this->error .= "Please enter a valid email <br>";
+			$this->error .= "Inserisci una mail valida <br>";
 		}
  
  		if(strlen($data['password']) < 4)
 		{
-			$this->error .= "Password must be atleast 4 characters long <br>";
+			$this->error .= "La password deve essere lunga minimo 4 caratteri <br>";
 		}
 
   		if($this->error == ""){
@@ -121,7 +121,7 @@ Class User
 				die;
 			}
 
-			$this->error .= "Wrong email or password <br>";
+			$this->error .= "Email o password errati <br>";
 
 		}
 

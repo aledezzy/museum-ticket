@@ -20,8 +20,8 @@
 										<h1><span><?=substr(strtoupper($row->header1_text),0,1)?></span><?=substr(strtoupper($row->header1_text),1)?></h1>
 										<h2><?=$row->header2_text?></h2>
 										<p><?=$row->text?></p>
-										<a href="<?=$row->link?>">
-											<button type="button" class="btn btn-default get">Get it now</button>
+										<a href="<?= ROOT ?>shop" class="<?= $page_title == "Shop" ? "active" : ""; ?>">
+											<button type="button" class="btn btn-default get">Vieni a visitarci ora</button>
 										</a>
 									</div>
 									<div class="col-sm-6">

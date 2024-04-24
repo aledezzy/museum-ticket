@@ -49,12 +49,12 @@
 			<p><b><?=$profile_data->name?></b></p>
 			<div class="row">
 				<div class="col-md-6">
-					<p id="user_text" class="small mt">MEMBER SINCE</p>
+					<p id="user_text" class="small mt">Membro da</p>
 					<p><?=date("jS M Y",strtotime($profile_data->date))?></p>
 				</div>
 				<div class="col-md-6">
-					<p id="user_text" class="small mt">TOTAL SPEND</p>
-					<p>$ 47,60</p>
+					<p id="user_text" class="small mt">Totale speso</p>
+					<p>€0</p>
 				</div>
 
 			</div>
@@ -80,7 +80,7 @@
 
 			<table class="table">
 				<thead>
-					<tr><th>Order no</th><th>Order date</th><th>Total</th><th>Delivery Address</th><th>City/State</th><th>Mobile Phone</th><th>Status</th><th>...</th></tr>
+					<tr><th>Ordine no</th><th>Data ordine</th><th>Totale</th><th>Indirizzo</th><th>Citta</th><th>Telefono</th><th>Stato</th><th>...</th></tr>
 				</thead>
 				<tbody onclick="show_details(event)">
 					<?php foreach($orders as $order):?>
@@ -93,11 +93,11 @@
 							<td>
 								<i class="fa fa-arrow-down"></i>
 								<div class="js-order-details details hide" >
-									<a style="float: right;cursor: pointer;">Close</a>
-									<h3>Order #<?=$order->id?></h3>
+									<a style="float: right;cursor: pointer;">Chiudi</a>
+									<h3>Ordine #<?=$order->id?></h3>
 									<table class="table">
 										<thead>
-											<tr><th>Qty</th><th>Description</th><th>Amount</th><th>Total</th></tr>
+											<tr><th>Qta</th><th>Descrizione</th><th>Amount</th><th>Totale</th></tr>
 										</thead>	
 										<?php if(isset($order->details) && is_array($order->details)):?>
 											<?php foreach($order->details as $detail):?>
@@ -108,10 +108,10 @@
 											<?php endforeach;?>
 
 										<?php else: ?>
-											<div>No order details were found for this order</div>
+											<div>Non ho trovato dettagli</div>
 										<?php endif;?>
 									</table>
-									<h3 class="pull-right">Grand Total: <?=$order->grand_total?></h3>
+									<h3 class="pull-right">Totale: <?=$order->grand_total?></h3>
 								</div>
 							</td>
 						</tr>
@@ -120,11 +120,11 @@
 			</table>
 		
 	<?php else: ?>
-		<h3 style="text-align: center;">this user has no orders yet</h3>
+		<h3 style="text-align: center;">Questo utente non ha neancora effettuato nessun acquisto</h3>
 	<?php endif;?>
 
 <?php else: ?>
-	<h3 style="text-align: center;">Sorry! that profile could not be found</h3>
+	<h3 style="text-align: center;">C'è stato un problema? L'utente non può essere trovato</h3>
 <?php endif;?>
 
 </div>

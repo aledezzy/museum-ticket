@@ -20,7 +20,7 @@
 	    					<?php endforeach;?>
 	    				<?php endif;?>
 	    				<?php if(isset($_GET['success'])):?>
-	    					<div class="status alert alert-success" style="">Message sent successfully</div>
+	    					<div class="status alert alert-success" style="">Messaggio mandato correttamente</div>
 	    				<?php endif;?>
 				    	<form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
 				            <div class="form-group col-md-6">

@@ -73,7 +73,7 @@
 								<?php if (isset($data['user_data']) && $data['user_data']->rank == 'admin') : ?>
 									<li><a href="<?= ROOT ?>profile"><i class="fa fa-user"></i> Account</a></li>
 								<?php endif; ?>
-								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+								<!--<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>-->
 								<li><a href="<?= ROOT ?>checkout"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="<?= ROOT ?>cart"><i class="fa fa-shopping-cart"></i> Carrello</a></li>
 

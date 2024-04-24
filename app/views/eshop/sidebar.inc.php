@@ -1,6 +1,6 @@
 <div class="col-sm-3">
 	<div class="left-sidebar">
-		<h2>Category</h2>
+		<h2>Categoria</h2>
 		<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 			
 			<?php if(isset($categories) && is_array($categories)):?>
@@ -52,7 +52,7 @@
 
 		</div><!--/category-products-->
 	
-		                 <h2>Advanced Search</h2>
+		                 <h2>Ricerca avanzata</h2>
                       	 <!--searchbox-->
                       	 <style>
                       	 	.my-table{
@@ -69,31 +69,31 @@
                        	 				<tr>
                        	 				 
                        	 					<td>
-                       	 						<input value="<?php Search::get_sticky('textbox','description')?>" autofocus="true" type="text" class="form-control" name="description" placeholder="Type Product name">
+                       	 						<input value="<?php Search::get_sticky('textbox','description')?>" autofocus="true" type="text" class="form-control" name="description" placeholder="Nome prodotto">
                        	 					</td>
                        	 				
                        	 				</tr>
                        	 			 	<tr>
                        	 					<td>
                        	 						<select class="form-control" name="category">
-                       	 							<option>--Select Category--</option>
+                       	 							<option>--Seleziona categoria--</option>
                        	 							<?php Search::get_categories('category')?>
                        	 						</select>
                        	 					</td>
                        	 			 	</tr>
                        	 				<tr>
                         	 				<td>
-                        	 					<div>Brands:</div>
+                        	 					<div>Tipologia:</div>
                         	 					<?php Search::get_brands()?>
                         	 				</td>
                        	 				</tr>
                        	 				
                        	 				<tr>
                        	 					<td>
-                       	 					<div>Price Range:</div>
+                       	 					<div>Fascia di prezzo:</div>
                        	 					<div class="well text-center price-range" style="margin-top: 0px;margin-bottom: 0px;">
-												 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="1000" data-slider-step="5" data-slider-value="[<?php Search::get_sticky('number','min-price','',0)?>,<?php Search::get_sticky('number','max-price','',1000)?>]" id="sl2" ><br />
-												 <b class="pull-left">$ 0</b> <b class="pull-right">$ 1000</b>
+												 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="100" data-slider-step="5" data-slider-value="[<?php Search::get_sticky('number','min-price','',0)?>,<?php Search::get_sticky('number','max-price','',1000)?>]" id="sl2" ><br />
+												 <b class="pull-left">€ 0</b> <b class="pull-right">€ 100</b>
  
                         	 						<input value="<?php Search::get_sticky('number','min-price')?>" class="form-control min-value" type="hidden" step="0.01" name="min-price">
                        	 							<input value="<?php Search::get_sticky('number','max-price')?>" class="form-control max-value" type="hidden" step="0.01" name="max-price">
@@ -105,7 +105,7 @@
                        	 				</tr>
                        	 				<tr>
                        	 					<td>
-                       	 					<div>Quantity</div>
+                       	 					<div>Quantità</div>
                        	 						<div class="form-inline" >
 	                       	 						
 	                       	 						<div class="well text-center quantity-range" style="margin-top: 0px;margin-bottom: 0px;">
@@ -119,17 +119,17 @@
                        	 						</div>
                        	 					</td>
                        	 				</tr>
-                       	 			 
+                       	 			 <!--
                        	 				<tr>
                         	 				<td>
                        	 						<select class="form-control" name="year">
-                       	 							<option>--Select Year--</option>
+                       	 							<option>--Seleziona anno--</option>
                        	 							 <?php Search::get_years('year')?>
 
                        	 						</select>
                        	 					</td>
-                       	 				</tr>
- 										<tr><td ><input type="submit" name="search" value="Search" class="btn btn-success pull-right"></td></tr>
+                       	 				</tr>-->
+ 										<tr><td ><input type="submit" name="search" value="Cerca" class="btn btn-success pull-right"></td></tr>
                       	 		</table>
                       	 </form>
                       	 	
