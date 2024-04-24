@@ -2,7 +2,7 @@
 	
 	<section id="advertisement">
 		<div class="container">
-			<img src="<?=ASSETS.THEME?>images/shop/advertisement.jpg" alt="" />
+			<img src="<?=ASSETS.THEME?>images/shop/advertisement2.jpg" alt="prrr" />
 		</div>
 	</section>
 	
@@ -14,7 +14,7 @@
 
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Featured Items</h2>
+						<h2 class="title text-center">Consigliati</h2>
 						
 						<?php if(isset($ROWS) && is_array($ROWS)): ?>
 						<?php foreach($ROWS as $row): ?>
