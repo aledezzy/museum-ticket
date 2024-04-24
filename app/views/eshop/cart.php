@@ -5,18 +5,18 @@
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="#">Home</a></li>
-				  <li class="active">Shopping Cart</li>
+				  <li class="active">Carrello</li>
 				</ol>
 			</div>
 			<div class="table-responsive cart_info"  style="margin-top: -50px;">
 				<table class="table table-condensed">
 					<thead>
 						<tr class="cart_menu">
-							<td class="image">Item</td>
+							<td class="image">Articolo</td>
 							<td class="description"></td>
-							<td class="price">Price</td>
-							<td class="quantity">Quantity</td>
-							<td class="total">Total</td>
+							<td class="price">Prezzo</td>
+							<td class="quantity">Quantità</td>
+							<td class="total">Totale</td>
 							<td></td>
 						</tr>
 					</thead>
@@ -53,7 +53,7 @@
 							<?php endforeach; ?>
 						<?php else: ?>
 
-							<div style="font-size: 18px;text-align: center;padding: 6px;">No items were found in the cart</div>
+							<div style="font-size: 18px;text-align: center;padding: 6px;">Nessun articolo nel carrello</div>
 						<?php endif; ?>
 					</tbody>
 				</table><div class="pull-right" style="font-size: 25px;">Sub Total: $<?=number_format($sub_total,2)?></div>

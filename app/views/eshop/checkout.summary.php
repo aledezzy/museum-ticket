@@ -26,7 +26,7 @@
 	<?php if(isset($orders) && is_array($orders)):?>
 
 			<div class="register-req">
-				<p style="text-align: center;">Please comfirm the information below</p>
+				<p style="text-align: center;">Si prega di confermare le informazioni di seguito</p>
 			</div><!--/register-req-->
  
  				<?php foreach($orders as $order):?>
@@ -38,17 +38,17 @@
 									<div style="display: flex;">
 										<table class="table" style="flex: 1;margin: 4px;">
 
-											<tr><th>Country</th><td><?=$order->country?></td></tr>
-											<tr><th>State</th><td><?=$order->state?></td></tr>
-											<tr><th>Delivery Address 1</th><td><?=$order->address1?></td></tr>
-											<tr><th>Delivery Address 2</th><td><?=$order->address2?></td></tr>
+											<tr><th>Paese</th><td><?=$order->country?></td></tr>
+											<tr><th>Stato</th><td><?=$order->state?></td></tr>
+											<tr><th>Indirizzo di consegna 1</th><td><?=$order->address1?></td></tr>
+											<tr><th>Indirizzo di consegna 2</th><td><?=$order->address2?></td></tr>
 											
 										</table>
 										<table class="table" style="flex: 1;margin: 4px;">
-											<tr><th>Zip/Postal Code</th><td><?=$order->postal_code?></td></tr>
-											<tr><th>Home Phone</th><td><?=$order->home_phone?></td></tr>
-											<tr><th>Mobile Phone</th><td><?=$order->mobile_phone?></td></tr>
-											<tr><th>Date</th><td><?=date("Y-m-d")?></td></tr>
+											<tr><th>CAP</th><td><?=$order->postal_code?></td></tr>
+											<tr><th>Telefono di casa</th><td><?=$order->home_phone?></td></tr>
+											<tr><th>Telefono cellulare</th><td><?=$order->mobile_phone?></td></tr>
+											<tr><th>Data</th><td><?=date("Y-m-d")?></td></tr>
 											
 										</table>
 									</div>
@@ -69,10 +69,10 @@
 											<?php endforeach;?>
 
 										<?php else: ?>
-											<div style="text-align: center;">No order details were found for this order</div>
+											<div style="text-align: center;">Nessun dettaglio</div>
 										<?php endif;?>
 									</table>
-									<h3 class="pull-right">Grand Total: <?=$sub_total?></h3>
+									<h3 class="pull-right">Totale: <?=$sub_total?></h3>
 								</div>
 					 
 					<?php endforeach;?>
@@ -80,7 +80,7 @@
 
 	<?php else:?>
 		<h3 style="text-align: center;">
-			Please add some items in the cart first!
+			Aggiungi prima degli articoli nel carrello!
 		</h3>
 	<?php endif;?>
 			<hr style="clear: both;">

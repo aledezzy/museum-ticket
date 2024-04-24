@@ -26,7 +26,7 @@
 	<?php if(is_array($ROWS)):?>
 
 			<div class="register-req">
-				<p>Fileds with a * are required</p>
+				<p>Campi con * sono obbligatori</p>
 			</div><!--/register-req-->
 
 		<?php 
@@ -106,7 +106,7 @@
 
 	<?php else:?>
 		<h3 style="text-align: center;">
-			Please add some items in the cart first!
+			Aggiungi un elemento nel carrello prima!
 		</h3>
 	<?php endif;?>
 
