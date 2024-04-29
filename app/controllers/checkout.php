@@ -56,6 +56,18 @@ Class Checkout extends Controller
 				$mytotal = $row->price * $row->cart_qty;
 
 				$data['sub_total'] += $mytotal;
+				/*find in table user if the current user  has a "categories" value and find in the specialcat table the discount for that categories. After update the total price*/
+				
+				$discount = $DB->read("select discount from specialcat as s, users as u where s.id = u.categories and u.url_address = :url_address",['url_address'=>$user_data->url_address] );
+				//echo var_dump($discount);
+				//echo $discount[0] -> discount;
+				//echo var_dump($discount[0]['discount']);
+				if(is_array($discount) && count($discount) > 0){
+					
+				$data['total_discount'] = ($mytotal * $discount[0]->discount) / 100;
+				$data['sub_total'] -= $data['total_discount'];
+				}
+				//echo $data['sub_total'];
 			}
 		}
 
@@ -139,6 +151,21 @@ Class Checkout extends Controller
  				$mytotal = $row->price * $row->cart_qty;
 
 				$data['sub_total'] += $mytotal;
+				
+				/*find in table user if the current user  has a "categories" value and find in the specialcat table the discount for that categories. After update the total price*/
+				
+				$discount = $DB->read("select discount from specialcat as s, users as u where s.id = u.categories and u.url_address = :url_address",['url_address'=>$user_data->url_address] );
+				//echo var_dump($discount);
+				
+				//echo $discount[0] -> discount;
+				
+				//echo var_dump($discount[0]['discount']);
+
+				if(is_array($discount) && count($discount) > 0){
+					
+					$data['total_discount'] = ($mytotal * $discount[0]->discount) / 100;
+					$data['sub_total'] -= $data['total_discount'];
+					}
 			}
 		}
 

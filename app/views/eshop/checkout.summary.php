@@ -55,11 +55,11 @@
 										<table style="width: 100%;background-color: #eee"><tr><td style="text-align: center;padding: 1em;"><?=$order->message?></td></tr></table>
 
 									<hr>
-									<h4>Order Summary</h4>
+									<h4>Sommario</h4>
 									<table class="table">
 										<thead>
-											<tr><th>Qty</th><th>Description</th><th>Amount</th><th>Total</th></tr>
-										</thead>	
+											<tr><th>Qta</th><th>Descrizione</th><th>Prezzo singolo</th><th>Totale</th></tr>
+										</thead>
 										<?php if(isset($order_details) && is_array($order_details)):?>
 											<?php foreach($order_details as $detail):?>
 												<tbody>
@@ -71,7 +71,11 @@
 										<?php else: ?>
 											<div style="text-align: center;">Nessun dettaglio</div>
 										<?php endif;?>
+										
 									</table>
+									<?php if(isset($total_discount)):?>
+										<h3 style="font-size: 90% !important; ">Sconto applicato: <?=$total_discount?>€ sul totale</h3>
+									<?php endif;?>
 									<h3 class="pull-right">Totale: <?=$sub_total?></h3>
 								</div>
 					 
