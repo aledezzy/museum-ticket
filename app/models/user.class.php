@@ -13,9 +13,7 @@ Class User
 		$data['email'] 		= trim($POST['email']);
 		$data['password'] 	= trim($POST['password']);
 		$password2 			= trim($POST['password2']);
-		$data['is-dis']	    = trim($POST['is-disabile']);
-		$data['dis-des']	= trim($POST['dis-descrizione']);
-		//$data['dis-file']	= $POST['dis-file'];
+		$data['specialcat']= trim($POST['specialcat']);
 
 		if(empty($data['email']) || !preg_match("/^[a-zA-Z_-]+@[a-zA-Z]+.[a-zA-Z]+$/", $data['email']))
 		{
@@ -63,7 +61,7 @@ Class User
 			$data['date'] = date("Y-m-d H:i:s");
 			$data['password'] = hash('sha1',$data['password']);
 
-			$query = "insert into users (url_address,name,email,password,rank,date) values (:url_address,:name,:email,:password,:rank,:date)";
+			$query = "insert into users (url_address,name,email,password,rank,date,categories) values (:url_address,:name,:email,:password,:rank,:date,:specialcat)";
 			$result = $db->write($query,$data);
 
 			if($result){

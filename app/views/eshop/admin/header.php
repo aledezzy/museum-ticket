@@ -37,7 +37,7 @@
                   <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
               </div>
             <!--logo start-->
-            <a href="<?=ROOT?>admin" class="logo"><b>eSHOP ADMIN</b></a>
+            <a href="<?=ROOT?>admin" class="logo"><b>Museo ADMIN</b></a>
             <!--logo end-->
             <div class="nav notify-row" id="top_menu">
                 <!--  notification start -->
@@ -51,12 +51,12 @@
                         <ul class="dropdown-menu extended tasks-bar">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have 4 pending tasks</p>
+                                <p class="green">Hai ben 4 cose da fare!</p>
                             </li>
                             <li>
                                 <a href="index.html#">
                                     <div class="task-info">
-                                        <div class="desc">DashGum Admin Panel</div>
+                                        <div class="desc">Admin Panel</div>
                                         <div class="percent">40%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -82,7 +82,7 @@
                             <li>
                                 <a href="index.html#">
                                     <div class="task-info">
-                                        <div class="desc">Product Development</div>
+                                        <div class="desc">Aggiornamento sicurezza</div>
                                         <div class="percent">80%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -95,7 +95,7 @@
                             <li>
                                 <a href="index.html#">
                                     <div class="task-info">
-                                        <div class="desc">Payments Sent</div>
+                                        <div class="desc">Pagamenti</div>
                                         <div class="percent">70%</div>
                                     </div>
                                     <div class="progress progress-striped">
@@ -106,7 +106,7 @@
                                 </a>
                             </li>
                             <li class="external">
-                                <a href="#">See All Tasks</a>
+                                <a href="#">Mostra altro</a>
                             </li>
                         </ul>
                     </li>
@@ -120,17 +120,17 @@
                         <ul class="dropdown-menu extended inbox">
                             <div class="notify-arrow notify-arrow-green"></div>
                             <li>
-                                <p class="green">You have 5 new messages</p>
+                                <p class="green">Hai 5 messaggi</p>
                             </li>
                             <li>
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="<?=ASSETS . THEME ?>admin/img/ui-zac.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Zac Snider</span>
-                                    <span class="time">Just now</span>
+                                    <span class="from">Marco</span>
+                                    <span class="time">Ora</span>
                                     </span>
                                     <span class="message">
-                                        Hi mate, how is everything?
+                                        Hai ricevuto la mail?
                                     </span>
                                 </a>
                             </li>
@@ -138,11 +138,11 @@
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="<?=ASSETS . THEME ?>admin/img/ui-divya.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Divya Manian</span>
-                                    <span class="time">40 mins.</span>
+                                    <span class="from">Maria</span>
+                                    <span class="time">40 min.</span>
                                     </span>
                                     <span class="message">
-                                     Hi, I need your help with this.
+                                     Salve, ho riscontrato un problema...
                                     </span>
                                 </a>
                             </li>
@@ -150,11 +150,11 @@
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="<?=ASSETS . THEME ?>admin/img/ui-danro.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Dan Rogers</span>
-                                    <span class="time">2 hrs.</span>
+                                    <span class="from">Daniel</span>
+                                    <span class="time">2 hr.</span>
                                     </span>
                                     <span class="message">
-                                        Love your new Dashboard.
+                                        Riusciresti a sistemare la Dashboard?.
                                     </span>
                                 </a>
                             </li>
@@ -162,16 +162,16 @@
                                 <a href="index.html#">
                                     <span class="photo"><img alt="avatar" src="<?=ASSETS . THEME ?>admin/img/ui-sherman.jpg"></span>
                                     <span class="subject">
-                                    <span class="from">Dj Sherman</span>
-                                    <span class="time">4 hrs.</span>
+                                    <span class="from">Capo</span>
+                                    <span class="time">4 hr.</span>
                                     </span>
                                     <span class="message">
-                                        Please, answer asap.
+                                        Sei licenziato.
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="index.html#">See all messages</a>
+                                <a href="#">Mostra tutto</a>
                             </li>
                         </ul>
                     </li>
@@ -181,7 +181,7 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
-                    <li><a class="logout" href="<?=ROOT?>">Website</a></li>
+                    <li><a class="logout" href="<?=ROOT?>">Torna al sito</a></li>
             	</ul>
                 <ul class="nav pull-right top-menu">
                     <li><a class="logout" href="<?=ROOT?>logout">Logout</a></li>

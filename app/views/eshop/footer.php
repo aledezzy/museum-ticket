@@ -74,7 +74,7 @@
 					<div class="col-sm-3 col-sm-offset-1">
 						<div class="single-widget">
 							<h2>Sul museo marte...</h2>
-							<form action="#" class="searchform">
+							<form action="javascript:alert('Ti sei registrato alla nostra newsletter! Grazie!');" class="searchform">
 								<input type="text" placeholder="Email..." />
 								<button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
 								<p>Ottieni gli aggiornamenti più recenti dal nostro sito e mantieniti aggiornato...</p>
