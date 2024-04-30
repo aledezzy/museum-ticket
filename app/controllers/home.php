@@ -105,8 +105,8 @@ Class Home extends Controller
 		$results = array();
 		$mycats = array();
 		$num = 0;
-		foreach ($categories as $cat) {
-			// code...
+		foreach (/*$categories <-- sbagliato!*/ $mycats as $cat) {
+	
 
 			$arr['id'] = $cat->id;
 			$ROWS = $DB->read("select * from products where category = :id order by rand() limit 5",$arr);
@@ -118,7 +118,7 @@ Class Home extends Controller
 
 				//crop images
 				foreach ($ROWS as $key => $row) {
-					# code...
+				
 					$ROWS[$key]->image = $image_class->get_thumb_post($ROWS[$key]->image);
 				}
 

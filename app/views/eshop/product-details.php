@@ -13,7 +13,7 @@
 						<div class="col-sm-5">
 							<div class="view-product">
 								<img src="<?=ROOT.$ROW->image?>" alt="" />
-								<h3>ZOOM</h3>
+								
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
@@ -53,11 +53,13 @@
 								<span>
 									<span>EUR €<?=$ROW->price?></span>
 									<label>Quantità:</label>
-									<input type="text" value="3" />
-									<button type="button" class="btn btn-fefault cart">
+									<input type="number" value="1" />
+									<a href="<?=ROOT?>add_to_cart/<?=$ROW->id?>" class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
 										Aggiungi al carrello
-									</button>
+									</a>
+
+									
 								</span>
 								<p><b>Disponibile?:</b> Si</p>
 								
@@ -71,7 +73,7 @@
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
 								
-								<li class="active"><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
+								<li class="active"><a href="#reviews" data-toggle="tab">Recensioni (1)</a></li>
 							</ul>
 						</div>
 						<div class="tab-content">

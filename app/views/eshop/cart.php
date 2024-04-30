@@ -33,7 +33,7 @@
 										<p>prod ID: <?=$row->id?></p>
 									</td>
 									<td class="cart_price">
-										<p>$<?=$row->price?></p>
+										<p>€<?=$row->price?></p>
 									</td>
 									<td class="cart_quantity">
 										<div class="cart_quantity_button">
@@ -43,7 +43,7 @@
 										</div>
 									</td>
 									<td class="cart_total">
-										<p class="cart_total_price">$<?=$row->price * $row->cart_qty?></p>
+										<p class="cart_total_price">€<?=$row->price * $row->cart_qty?></p>
 									</td>
 									<td class="cart_delete">
 										<a class="cart_quantity_delete" delete_id="<?=$row->id?>" onclick="delete_item(this.getAttribute('delete_id'))" href="<?=ROOT?>add_to_cart/remove/<?=$row->id?>"><i class="fa fa-times"></i></a>
@@ -56,7 +56,7 @@
 							<div style="font-size: 18px;text-align: center;padding: 6px;">Nessun articolo nel carrello</div>
 						<?php endif; ?>
 					</tbody>
-				</table><div class="pull-right" style="font-size: 25px;">Sub Total: $<?=number_format($sub_total,2)?></div>
+				</table><div class="pull-right" style="font-size: 25px;">Sub-Totale: €<?=number_format($sub_total,2)?></div>
 			</div>
 			<a href="<?=ROOT?>checkout">
 				<input type="button" class="btn btn-warning pull-right" value="Checkout >" name="">

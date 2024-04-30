@@ -8,19 +8,15 @@
 				
 				<div class="col-sm-4 col-sm-offset-1" style="float: none;display: inline-block;">
 					<div class="login-form"><!--login form-->
-						<h2>Login to your account</h2>
+						<h2>Login al tuo account</h2>
 						<form method="post">
-							<input type="email" name="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '';?>" placeholder="Email Address" />
+							<input type="email" name="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '';?>" placeholder="Email" />
 							<input type="password" name="password" value="<?= isset($_POST['password']) ? $_POST['password'] : '';?>" placeholder="Password" />
-							<span>
-								<input type="checkbox" class="checkbox"> 
-								Keep me signed in
-
-							</span>
+							
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
 						<br>
-						<a href="<?=ROOT?>signup">Dont have an account? Signup here</a>
+						<a href="<?=ROOT?>signup">Non hai un account? Registrati</a>
 					</div><!--/login form-->
 				</div>
 			 

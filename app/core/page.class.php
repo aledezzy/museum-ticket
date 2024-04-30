@@ -20,7 +20,7 @@ class Page
 		?>
 		<br style="clear: both;">
 		<ul class="pagination">
-			<li><a href="<?=self::links()->prev?>">Prev</a></li>
+			<li><a href="<?=self::links()->prev?>">Prec</a></li>
 				<?php
 					$max = self::links()->current + 5;
 					$cur = (self::links()->current > 5) ? self::links()->current - 5 : 1;
@@ -33,7 +33,7 @@ class Page
 					
 				<?php endfor;?>
 
-			<li><a href="<?=self::links()->next?>">Next</a></li>
+			<li><a href="<?=self::links()->next?>">Prossimo</a></li>
 		</ul>
 		<?php 
 	}

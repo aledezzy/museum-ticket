@@ -9,15 +9,14 @@
 
 				<div class="col-sm-4" style="float: none;display: inline-block;">
 					<div class="signup-form"><!--sign up form-->
-						<h2>New User Signup!</h2>
+						<h2>Nuovo utente!</h2>
 						<form method="post">
 							<input name="name" value="<?= isset($_POST['name']) ? $_POST['name'] : '';?>" type="text" placeholder="Name"/>
 							<input name="email" value="<?= isset($_POST['email']) ? $_POST['email'] : '';?>" type="email" placeholder="Email Address"/>
 							<input name="password" type="password" placeholder="Password"/>
-							<input name="password2" type="password" placeholder="Retype Password"/>
+							<input name="password2" type="password" placeholder="Riscrivi Password"/>
 							<div id="disabile">
 							<select name="specialcat" class="user_info">
-								<option>Nessuna</option>
 								<?php
 									$db = Database::getInstance();
 									$query = "select id, description from specialcat";

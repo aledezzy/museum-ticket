@@ -73,7 +73,7 @@
 										<?php endif;?>
 										
 									</table>
-									<?php if(isset($total_discount)):?>
+									<?php if($total_discount > 0):?>
 										<h3 style="font-size: 90% !important; ">Sconto applicato: <?=$total_discount?>€ sul totale</h3>
 									<?php endif;?>
 									<h3 class="pull-right">Totale: <?=$sub_total?></h3>
