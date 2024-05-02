@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.1deb1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 23, 2021 at 01:10 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Host: localhost:3306
+-- Generation Time: May 02, 2024 at 08:08 PM
+-- Server version: 10.11.6-MariaDB-0+deb12u1
+-- PHP Version: 8.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,19 +35,7 @@ CREATE TABLE `blogs` (
   `image` varchar(500) DEFAULT NULL,
   `date` datetime NOT NULL,
   `user_url` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `blogs`
---
-
-INSERT INTO `blogs` (`id`, `url_address`, `title`, `post`, `image`, `date`, `user_url`) VALUES
-(2, 'how-to-make-a-burger', 'How To Make A Burger', 'this is how to make a wonderful burger.\r\n\r\n1. get some flour.\r\n2.boil the water.\r\n3.put in oven', 'uploads/6bH5AVbvNJkEpkXxR8sj6vdZw2A9lrppUfN1IsumHutF4sNRSN1iDzkfXmsh.jpg', '2021-05-27 11:35:02', 'IYHtfbbTBkpFExy'),
-(3, 'how-to-make-a-burger-95149', 'How To Make A Burger2', 'this is how to make a wonderful burger.\r\n\r\n1. get some flour.\r\n2.boil the water.\r\n3.put in oven', 'uploads/zievHF6YSFxNImW3mjo7kp4LXY9YIsflMFjsvmheQt0VXxfssIC4PXbtP7wM.jpg', '2021-05-27 11:35:09', 'IYHtfbbTBkpFExy'),
-(4, 'one-more-post', 'One More Post', 'this is some content', 'uploads/mnf7B3I3PTp7jYw8UZXuueO0U9HnIa2dRdOgxltYB1avQEIoGdLAK14692YG.jpg', '2021-05-27 11:41:55', 'IYHtfbbTBkpFExy'),
-(5, 'a-new-title', 'A New Title', 'post for a new title', 'uploads/nht5ndAVSlEIdpBHKLYaXh4xAIjAEW9QbvcDFZpMsWpTUazkyOuv3WyjuFkx.jpg', '2021-05-27 11:43:12', 'IYHtfbbTBkpFExy'),
-(6, 'a-final-title', 'A Final Title', 'this is a description for the final title post', 'uploads/UOOVKmySvtatPMr579kWZaftb5aw7celoGellCaXyMLG5ewbyiWsFRqlxXye.jpg', '2021-05-27 11:44:31', 'IYHtfbbTBkpFExy'),
-(7, 'a-long-post-test', 'A Long Post Test', 'What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?\r\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\r\n\r\nWhat is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?\r\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\r\n\r\nWhat is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?\r\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\r\n\r\nWhat is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?\r\nLorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', 'uploads/iPQEwdllWnj14THWKegpuoK7G1GSOqggiso46wlarB4DI0L7zTqIoFqFTKNW.jpg', '2021-05-31 19:18:02', 'IYHtfbbTBkpFExy');
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -60,17 +48,16 @@ CREATE TABLE `brands` (
   `brand` varchar(30) NOT NULL,
   `disabled` tinyint(1) NOT NULL DEFAULT 0,
   `views` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `brands`
 --
 
 INSERT INTO `brands` (`id`, `brand`, `disabled`, `views`) VALUES
-(1, 'Johnsons', 0, 0),
-(2, 'Ronhill', 0, 0),
-(3, 'Albiro', 0, 0),
-(4, 'Toyota', 0, 0);
+(1, 'Intero', 0, 0),
+(2, 'Espozizione Singola', 0, 0),
+(3, 'Legge 507/97', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -84,23 +71,15 @@ CREATE TABLE `categories` (
   `disabled` tinyint(1) NOT NULL DEFAULT 0,
   `parent` int(11) NOT NULL,
   `views` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`id`, `category`, `disabled`, `parent`, `views`) VALUES
-(1, 'Food', 0, 0, 6),
-(2, 'Drinks', 0, 0, 15),
-(4, 'Sodas', 1, 0, 1),
-(5, 'Clothes', 0, 0, 2),
-(6, 'Meat', 0, 0, 0),
-(7, 'Bags', 0, 0, 0),
-(8, 'Cars', 0, 0, 0),
-(9, 'Hats', 0, 5, 3),
-(10, 'Shirts', 0, 5, 6),
-(11, 'Goodies', 0, 0, 0);
+(1, 'Biglietti', 0, 0, 22),
+(2, 'Extra', 0, 0, 24);
 
 -- --------------------------------------------------------
 
@@ -115,14 +94,15 @@ CREATE TABLE `contact_us` (
   `subject` varchar(30) NOT NULL,
   `message` varchar(1000) NOT NULL,
   `date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `contact_us`
 --
 
 INSERT INTO `contact_us` (`id`, `name`, `email`, `subject`, `message`, `date`) VALUES
-(2, 'A Second Person', 'email2@email.com', 'a subject', 'a subject2', '2021-05-22 12:25:18');
+(2, 'Gianna', 'Gianna@email.com', 'Messaggio da Gianna', 'Ciaooooo', '2024-04-26 12:25:18'),
+(3, 'Perry', 'lala@lala.iy', 'lallo', 'lallo', '2024-04-24 22:31:49');
 
 -- --------------------------------------------------------
 
@@ -134,15 +114,21 @@ CREATE TABLE `countries` (
   `id` int(11) NOT NULL,
   `country` varchar(30) NOT NULL,
   `disabled` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `countries`
 --
 
 INSERT INTO `countries` (`id`, `country`, `disabled`) VALUES
-(1, 'Zambia', 0),
-(2, 'South Africa', 0);
+(1, 'Italia', 0),
+(2, 'Gran Bretagna', 0),
+(3, 'India', 0),
+(4, 'Germania', 0),
+(5, 'Francia', 0),
+(6, 'Spagna', 0),
+(7, 'Repubblica Ceca', 0),
+(8, 'Olanda', 0);
 
 -- --------------------------------------------------------
 
@@ -165,33 +151,18 @@ CREATE TABLE `orders` (
   `sessionid` varchar(30) NOT NULL,
   `home_phone` varchar(15) NOT NULL,
   `mobile_phone` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`id`, `user_url`, `description`, `delivery_address`, `total`, `country`, `state`, `zip`, `tax`, `shipping`, `date`, `sessionid`, `home_phone`, `mobile_phone`) VALUES
-(1, 'IYHtfbbTBkpFExy', '', 'my address in town home town', 110.92, 'Zambia', 'Nothern', '10101', 0, 0, '2021-04-21 20:38:25', 'egfghjpd9s0tri59fs8q7rlt7l', '0956789099', '2606753435'),
-(2, 'IYHtfbbTBkpFExy', '', 'my address in town home town', 110.92, 'Zambia', 'Nothern', '10101', 0, 0, '2021-04-21 20:38:46', 'egfghjpd9s0tri59fs8q7rlt7l', '0956789099', '2606753435'),
-(3, 'IYHtfbbTBkpFExy', '', 'plot number1 plot number 2', 72.96, 'Zambia', 'Nothern', '10101', 0, 0, '2021-04-30 12:31:47', 'o9sln93qsk4u3rkl5qvhsulcdq', '075725722', '097563635'),
-(4, 'IYHtfbbTBkpFExy', '', 'plot 1234 new road lusaka ', 71.95, 'Zambia', 'Southern', '10101', 0, 0, '2021-05-04 21:03:14', 'o9sln93qsk4u3rkl5qvhsulcdq', '', '0986543467'),
-(5, 'IYHtfbbTBkpFExy', '', 'Lusaka Lusaka', 9.99, 'Zambia', 'Nothern', '10101', 0, 0, '2021-07-06 12:58:30', '4geg1pa308bcadbuqfhlvcvdjt', '244324', '2423424234'),
-(6, 'IYHtfbbTBkpFExy', '', 'plot 1234 new road lusaka Lusaka', 9.99, 'Zambia', 'Nothern', '1001', 0, 0, '2021-07-06 13:02:00', '4geg1pa308bcadbuqfhlvcvdjt', '4254545', '35324545'),
-(8, 'IYHtfbbTBkpFExy', '', 'aeefdfdfda dsadcvd', 9.99, 'South Africa', 'Burg', 'sfvdfv', 0, 0, '2021-07-09 13:32:51', '73d0bvfoijv78lfe8iau8q438i', 'dvdvcd', 'sdfvdvdv'),
-(9, 'IYHtfbbTBkpFExy', 'order 8', 'Zambia Lusaka', 20.99, 'South Africa', 'Burg', '1223', 0, 0, '2021-07-09 13:51:21', '73d0bvfoijv78lfe8iau8q438i', 'burg', '0989787854'),
-(10, 'IYHtfbbTBkpFExy', 'order 10', 'wfgsfvgf sfvfv', 20.99, 'South Africa', 'Burg', 'sdfvvs', 0, 0, '2021-07-09 13:54:11', '73d0bvfoijv78lfe8iau8q438i', 'dfdfdf', 'dfdfd'),
-(11, 'IYHtfbbTBkpFExy', 'order 11', 'aefdf wdfd', 12.99, 'South Africa', 'Sun City', 'dvfd', 0, 0, '2021-07-09 14:00:03', '73d0bvfoijv78lfe8iau8q438i', 'sdacv', 'dcfd'),
-(12, 'IYHtfbbTBkpFExy', 'order 12', 'aefdf wdfd', 12.99, 'South Africa', 'Sun City', 'dvfd', 0, 0, '2021-07-09 14:02:57', '73d0bvfoijv78lfe8iau8q438i', 'sdacv', 'dcfd'),
-(13, 'IYHtfbbTBkpFExy', 'order 13', 'aefdf wdfd', 25.98, 'South Africa', 'Sun City', 'dvfd', 0, 0, '2021-07-09 20:40:10', '73d0bvfoijv78lfe8iau8q438i', 'sdacv', 'dcfd'),
-(14, 'IYHtfbbTBkpFExy', '', 'my address in town home town', 110.92, 'Zambia', 'Nothern', '10101', 0, 0, '2021-04-21 20:38:25', 'egfghjpd9s0tri59fs8q7rlt7l', '0956789099', '2606753435'),
-(15, 'IYHtfbbTBkpFExy', '', 'my address in town home town', 110.92, 'Zambia', 'Nothern', '10101', 0, 0, '2021-04-21 20:38:46', 'egfghjpd9s0tri59fs8q7rlt7l', '0956789099', '2606753435'),
-(16, 'IYHtfbbTBkpFExy', '', 'plot number1 plot number 2', 72.96, 'Zambia', 'Nothern', '10101', 0, 0, '2021-04-30 12:31:47', 'o9sln93qsk4u3rkl5qvhsulcdq', '075725722', '097563635'),
-(17, 'IYHtfbbTBkpFExy', '', 'plot 1234 new road lusaka ', 71.95, 'Zambia', 'Southern', '10101', 0, 0, '2021-05-04 21:03:14', 'o9sln93qsk4u3rkl5qvhsulcdq', '', '0986543467'),
-(18, 'IYHtfbbTBkpFExy', 'order 5', 'Lusaka plot number 2', 22.98, 'South Africa', 'Sun City', '1001', 0, 0, '2021-07-09 19:25:22', 'ujaa4qq9p5logrg7kgigbrdvun', 'burg', '0989787854'),
-(19, 'IYHtfbbTBkpFExy', 'order 6', 'Lusaka plot number 2', 1.05, 'South Africa', 'Sun City', '1223', 0, 0, '2021-07-13 10:16:39', 'ujaa4qq9p5logrg7kgigbrdvun', 'Lusaka', '0986543467'),
-(20, 'IYHtfbbTBkpFExy', 'order 7', 'plot number1 plot number 2', 0.42, 'Zambia', 'Southern', '1001', 0, 0, '2021-07-13 10:19:18', 'ujaa4qq9p5logrg7kgigbrdvun', 'plot', '0986543467'),
-(21, 'IYHtfbbTBkpFExy', 'order 21', 'adfadf adfadfd', 0.63, 'South Africa', 'Burg', 'afadf', 0, 0, '2021-07-18 21:15:55', 'qqtd8h2cql5c3d8u59co74cn98', 'afad', 'acvdav');
+(23, '1USntCLPNNv0sMCpiuw6nlPryskHxIzAltBYHyLkyThl93nXZdYnw9', '1', 'asdasdas ', 25, 'Italia', 'asd', '54', 0, 0, '2024-04-29 07:14:07', '3a3rugdt3mte0d2gt1or2apefi', '', 'sda'),
+(24, '07PYfGqHukAtwrCPTNcIM32ZciGxmKXJxnjc9t', 'order 24', 'asddf fff', 30, 'Italia', 'padova', '30030', 0, 0, '2024-05-02 08:43:20', 'kts0j5kbn6ksdil1feohjerd9h', '5448', '18989'),
+(25, '07PYfGqHukAtwrCPTNcIM32ZciGxmKXJxnjc9t', 'order 25', 'A A', -260, 'Italia', 'padova', '30030', 0, 0, '2024-05-02 08:54:24', 'kts0j5kbn6ksdil1feohjerd9h', '333', '333'),
+(26, 'dvd7Hmns5V', 'order 26', 'Via Isonzo, 19 ', 30, 'Italia', 'PD', '35035', 0, 0, '2024-05-02 16:16:27', 'batni9egqf96pkt7mu1jv4s5uk', '', '3245644944'),
+(27, 'dvd7Hmns5V', 'order 27', 'Via Isonzo, 19 ', 5, 'Italia', 'PD', '35035', 0, 0, '2024-05-02 16:22:46', 'batni9egqf96pkt7mu1jv4s5uk', '', '3245644944');
 
 -- --------------------------------------------------------
 
@@ -207,33 +178,17 @@ CREATE TABLE `order_details` (
   `amount` double NOT NULL,
   `total` double NOT NULL,
   `productid` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `order_details`
 --
 
 INSERT INTO `order_details` (`id`, `orderid`, `qty`, `description`, `amount`, `total`, `productid`) VALUES
-(1, 1, 3, 'Milo Candy Bar', 12.99, 38.97, 9),
-(2, 1, 2, 'Weet Bix 1.4 Kg', 20.99, 41.98, 8),
-(3, 1, 3, 'Burger 250g With Drink', 9.99, 29.97, 7),
-(4, 2, 3, 'Milo Candy Bar', 12.99, 38.97, 9),
-(5, 2, 2, 'Weet Bix 1.4 Kg', 20.99, 41.98, 8),
-(6, 2, 3, 'Burger 250g With Drink', 9.99, 29.97, 7),
-(7, 3, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
-(8, 3, 3, 'Weet Bix 1.4 Kg', 20.99, 62.97, 8),
-(9, 4, 3, 'Burger 250g With Drink', 9.99, 29.97, 7),
-(10, 4, 2, 'Weet Bix 1.4 Kg', 20.99, 41.98, 8),
-(11, 5, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
-(12, 6, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
-(13, 7, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
-(14, 8, 1, 'Burger 250g With Drink', 9.99, 9.99, 7),
-(15, 8, 1, 'Weet Bix 1.4 Kg', 20.99, 20.99, 8),
-(16, 10, 1, 'Weet Bix 1.4 Kg', 20.99, 20.99, 8),
-(17, 11, 1, 'Milo Candy Bar', 12.99, 12.99, 9),
-(18, 12, 1, 'Milo Candy Bar', 12.99, 12.99, 9),
-(19, 13, 2, 'Milo Candy Bar', 12.99, 25.98, 9),
-(20, 21, 3, 'Alcohol', 0.21, 0.63, 10);
+(22, 0, 1, 'Biglietto Ridotto', 25, 25, 2),
+(23, 24, 1, 'Biglietto Intero', 30, 30, 1),
+(27, 26, 1, 'Biglietto Intero', 30, 30, 1),
+(28, 27, 1, 'Audioguida', 5, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -255,16 +210,16 @@ CREATE TABLE `payments` (
   `last_name` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `payer_id` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `payments`
 --
 
 INSERT INTO `payments` (`id`, `date`, `trans_id`, `raw`, `event_type`, `amount`, `status`, `order_id`, `summary`, `first_name`, `last_name`, `email`, `payer_id`) VALUES
-(1, '2021-07-06 12:34:23', 'WH-72368620FC4839506-578153864S1803135', '{\"id\":\"WH-72368620FC4839506-578153864S1803135\",\"event_version\":\"1.0\",\"create_time\":\"2021-07-03T18:36:26.977Z\",\"resource_type\":\"checkout-order\",\"resource_version\":\"2.0\",\"event_type\":\"CHECKOUT.ORDER.APPROVED\",\"summary\":\"An order has been approved by buyer\",\"resource\":{\"create_time\":\"2021-07-03T18:31:44Z\",\"purchase_units\":[{\"reference_id\":\"default\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"6.00\",\"breakdown\":{\"item_total\":{\"currency_code\":\"USD\",\"value\":\"4.00\"},\"shipping\":{\"currency_code\":\"USD\",\"value\":\"2.00\"},\"tax_total\":{\"currency_code\":\"USD\",\"value\":\"0.00\"}}},\"payee\":{\"email_address\":\"eathorne2012-facilitator@yahoo.com\",\"merchant_id\":\"QKRY6BTWMQQ8C\"},\"description\":\"My item description\",\"shipping\":{\"name\":{\"full_name\":\"test buyer\"},\"address\":{\"address_line_1\":\"1 Main St\",\"admin_area_2\":\"San Jose\",\"admin_area_1\":\"CA\",\"postal_code\":\"95131\",\"country_code\":\"US\"}}}],\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/8D5278164K216725B\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/8D5278164K216725B\",\"rel\":\"update\",\"method\":\"PATCH\"},{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/8D5278164K216725B/capture\",\"rel\":\"capture\",\"method\":\"POST\"}],\"id\":\"8D5278164K216725B\",\"intent\":\"CAPTURE\",\"payer\":{\"name\":{\"given_name\":\"test\",\"surname\":\"buyer\"},\"email_address\":\"eathorne2012-buyer@yahoo.com\",\"payer_id\":\"QCEPS6HXTCW9N\",\"address\":{\"country_code\":\"US\"}},\"status\":\"APPROVED\"},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-72368620FC4839506-578153864S1803135\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-72368620FC4839506-578153864S1803135/resend\",\"rel\":\"resend\",\"method\":\"POST\"}]}', 'CHECKOUT.ORDER.APPROVED', '6.00', 'APPROVED', 'My item description', 'An order has been approved by buyer', 'test', 'buyer', 'eathorne2012-buyer@yahoo.com', 'QCEPS6HXTCW9N'),
-(2, '2021-07-09 19:26:44', 'WH-4U387217Y0402090W-29K29120XX664362Y', '{\"id\":\"WH-4U387217Y0402090W-29K29120XX664362Y\",\"event_version\":\"1.0\",\"create_time\":\"2021-07-09T19:26:34.680Z\",\"resource_type\":\"checkout-order\",\"resource_version\":\"2.0\",\"event_type\":\"CHECKOUT.ORDER.APPROVED\",\"summary\":\"An order has been approved by buyer\",\"resource\":{\"update_time\":\"2021-07-09T19:26:33Z\",\"create_time\":\"2021-07-09T19:25:30Z\",\"purchase_units\":[{\"reference_id\":\"default\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"22.98\",\"breakdown\":{\"item_total\":{\"currency_code\":\"USD\",\"value\":\"22.98\"},\"shipping\":{\"currency_code\":\"USD\",\"value\":\"0.00\"},\"tax_total\":{\"currency_code\":\"USD\",\"value\":\"0.00\"}}},\"payee\":{\"email_address\":\"eathorne2012-facilitator@yahoo.com\",\"merchant_id\":\"QKRY6BTWMQQ8C\"},\"description\":\"order 5\",\"shipping\":{\"name\":{\"full_name\":\"test buyer\"},\"address\":{\"address_line_1\":\"1 Main St\",\"admin_area_2\":\"San Jose\",\"admin_area_1\":\"CA\",\"postal_code\":\"95131\",\"country_code\":\"US\"}},\"payments\":{\"captures\":[{\"id\":\"29B44561UF627130H\",\"status\":\"COMPLETED\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"22.98\"},\"final_capture\":true,\"seller_protection\":{\"status\":\"ELIGIBLE\",\"dispute_categories\":[\"ITEM_NOT_RECEIVED\",\"UNAUTHORIZED_TRANSACTION\"]},\"seller_receivable_breakdown\":{\"gross_amount\":{\"currency_code\":\"USD\",\"value\":\"22.98\"},\"paypal_fee\":{\"currency_code\":\"USD\",\"value\":\"0.97\"},\"net_amount\":{\"currency_code\":\"USD\",\"value\":\"22.01\"}},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/payments/captures/29B44561UF627130H\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v2/payments/captures/29B44561UF627130H/refund\",\"rel\":\"refund\",\"method\":\"POST\"},{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/60J70994M39520325\",\"rel\":\"up\",\"method\":\"GET\"}],\"create_time\":\"2021-07-09T19:26:33Z\",\"update_time\":\"2021-07-09T19:26:33Z\"}]}}],\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/60J70994M39520325\",\"rel\":\"self\",\"method\":\"GET\"}],\"id\":\"60J70994M39520325\",\"intent\":\"CAPTURE\",\"payer\":{\"name\":{\"given_name\":\"test\",\"surname\":\"buyer\"},\"email_address\":\"eathorne2012-buyer@yahoo.com\",\"payer_id\":\"QCEPS6HXTCW9N\",\"address\":{\"country_code\":\"US\"}},\"status\":\"COMPLETED\"},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-4U387217Y0402090W-29K29120XX664362Y\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-4U387217Y0402090W-29K29120XX664362Y/resend\",\"rel\":\"resend\",\"method\":\"POST\"}]}', 'CHECKOUT.ORDER.APPROVED', '22.98', 'COMPLETED', 'order 5', 'An order has been approved by buyer', 'test', 'buyer', 'eathorne2012-buyer@yahoo.com', 'QCEPS6HXTCW9N'),
-(3, '2021-07-13 10:19:20', 'WH-7T326909W98431811-0PA11016TB7979214', '{\"id\":\"WH-7T326909W98431811-0PA11016TB7979214\",\"event_version\":\"1.0\",\"create_time\":\"2021-07-13T10:18:33.518Z\",\"resource_type\":\"checkout-order\",\"resource_version\":\"2.0\",\"event_type\":\"CHECKOUT.ORDER.APPROVED\",\"summary\":\"An order has been approved by buyer\",\"resource\":{\"update_time\":\"2021-07-13T10:18:17Z\",\"create_time\":\"2021-07-13T10:17:05Z\",\"purchase_units\":[{\"reference_id\":\"default\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"1.05\",\"breakdown\":{\"item_total\":{\"currency_code\":\"USD\",\"value\":\"1.05\"},\"shipping\":{\"currency_code\":\"USD\",\"value\":\"0.00\"},\"tax_total\":{\"currency_code\":\"USD\",\"value\":\"0.00\"}}},\"payee\":{\"email_address\":\"eathorne2012-facilitator@yahoo.com\",\"merchant_id\":\"QKRY6BTWMQQ8C\"},\"description\":\"order 6\",\"shipping\":{\"name\":{\"full_name\":\"test buyer\"},\"address\":{\"address_line_1\":\"1 Main St\",\"admin_area_2\":\"San Jose\",\"admin_area_1\":\"CA\",\"postal_code\":\"95131\",\"country_code\":\"US\"}},\"payments\":{\"captures\":[{\"id\":\"1BE01178RF206244J\",\"status\":\"COMPLETED\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"1.05\"},\"final_capture\":true,\"seller_protection\":{\"status\":\"ELIGIBLE\",\"dispute_categories\":[\"ITEM_NOT_RECEIVED\",\"UNAUTHORIZED_TRANSACTION\"]},\"seller_receivable_breakdown\":{\"gross_amount\":{\"currency_code\":\"USD\",\"value\":\"1.05\"},\"paypal_fee\":{\"currency_code\":\"USD\",\"value\":\"0.33\"},\"net_amount\":{\"currency_code\":\"USD\",\"value\":\"0.72\"}},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/payments/captures/1BE01178RF206244J\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v2/payments/captures/1BE01178RF206244J/refund\",\"rel\":\"refund\",\"method\":\"POST\"},{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/4PA73887R93208929\",\"rel\":\"up\",\"method\":\"GET\"}],\"create_time\":\"2021-07-13T10:18:17Z\",\"update_time\":\"2021-07-13T10:18:17Z\"}]}}],\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/4PA73887R93208929\",\"rel\":\"self\",\"method\":\"GET\"}],\"id\":\"4PA73887R93208929\",\"intent\":\"CAPTURE\",\"payer\":{\"name\":{\"given_name\":\"test\",\"surname\":\"buyer\"},\"email_address\":\"eathorne2012-buyer@yahoo.com\",\"payer_id\":\"QCEPS6HXTCW9N\",\"address\":{\"country_code\":\"US\"}},\"status\":\"COMPLETED\"},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-7T326909W98431811-0PA11016TB7979214\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-7T326909W98431811-0PA11016TB7979214/resend\",\"rel\":\"resend\",\"method\":\"POST\"}]}', 'CHECKOUT.ORDER.APPROVED', '1.05', 'COMPLETED', 'order 6', 'An order has been approved by buyer', 'test', 'buyer', 'eathorne2012-buyer@yahoo.com', 'QCEPS6HXTCW9N');
+(1, '2021-07-06 12:34:23', 'WH-72368620FC4839506-578153864S1803135', '{\"id\":\"WH-72368620FC4839506-578153864S1803135\",\"event_version\":\"1.0\",\"create_time\":\"2021-07-03T18:36:26.977Z\",\"resource_type\":\"checkout-order\",\"resource_version\":\"2.0\",\"event_type\":\"CHECKOUT.ORDER.APPROVED\",\"summary\":\"An order has been approved by buyer\",\"resource\":{\"create_time\":\"2021-07-03T18:31:44Z\",\"purchase_units\":[{\"reference_id\":\"default\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"6.00\",\"breakdown\":{\"item_total\":{\"currency_code\":\"USD\",\"value\":\"4.00\"},\"shipping\":{\"currency_code\":\"USD\",\"value\":\"2.00\"},\"tax_total\":{\"currency_code\":\"USD\",\"value\":\"0.00\"}}},\"payee\":{\"email_address\":\"eathorne2012-facilitator@yahoo.com\",\"merchant_id\":\"QKRY6BTWMQQ8C\"},\"description\":\"My item description\",\"shipping\":{\"name\":{\"full_name\":\"test buyer\"},\"address\":{\"address_line_1\":\"1 Main St\",\"admin_area_2\":\"San Jose\",\"admin_area_1\":\"CA\",\"postal_code\":\"95131\",\"country_code\":\"US\"}}}],\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/8D5278164K216725B\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/8D5278164K216725B\",\"rel\":\"update\",\"method\":\"PATCH\"},{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/8D5278164K216725B/capture\",\"rel\":\"capture\",\"method\":\"POST\"}],\"id\":\"8D5278164K216725B\",\"intent\":\"CAPTURE\",\"payer\":{\"name\":{\"given_name\":\"test\",\"surname\":\"buyer\"},\"email_address\":\"eathorne2012-buyer@yahoo.com\",\"payer_id\":\"QCEPS6HXTCW9N\",\"address\":{\"country_code\":\"US\"}},\"status\":\"APPROVED\"},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-72368620FC4839506-578153864S1803135\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-72368620FC4839506-578153864S1803135/resend\",\"rel\":\"resend\",\"method\":\"POST\"}]}', 'CHECKOUT.ORDER.APPROVED', 20.00, 'APPROVED', 'My item description', 'An order has been approved by buyer', 'test', 'buyer', 'eathorne2012-buyer@yahoo.com', 'QCEPS6HXTCW9N'),
+(2, '2021-07-09 19:26:44', 'WH-4U387217Y0402090W-29K29120XX664362Y', '{\"id\":\"WH-4U387217Y0402090W-29K29120XX664362Y\",\"event_version\":\"1.0\",\"create_time\":\"2021-07-09T19:26:34.680Z\",\"resource_type\":\"checkout-order\",\"resource_version\":\"2.0\",\"event_type\":\"CHECKOUT.ORDER.APPROVED\",\"summary\":\"An order has been approved by buyer\",\"resource\":{\"update_time\":\"2021-07-09T19:26:33Z\",\"create_time\":\"2021-07-09T19:25:30Z\",\"purchase_units\":[{\"reference_id\":\"default\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"22.98\",\"breakdown\":{\"item_total\":{\"currency_code\":\"USD\",\"value\":\"22.98\"},\"shipping\":{\"currency_code\":\"USD\",\"value\":\"0.00\"},\"tax_total\":{\"currency_code\":\"USD\",\"value\":\"0.00\"}}},\"payee\":{\"email_address\":\"eathorne2012-facilitator@yahoo.com\",\"merchant_id\":\"QKRY6BTWMQQ8C\"},\"description\":\"order 5\",\"shipping\":{\"name\":{\"full_name\":\"test buyer\"},\"address\":{\"address_line_1\":\"1 Main St\",\"admin_area_2\":\"San Jose\",\"admin_area_1\":\"CA\",\"postal_code\":\"95131\",\"country_code\":\"US\"}},\"payments\":{\"captures\":[{\"id\":\"29B44561UF627130H\",\"status\":\"COMPLETED\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"22.98\"},\"final_capture\":true,\"seller_protection\":{\"status\":\"ELIGIBLE\",\"dispute_categories\":[\"ITEM_NOT_RECEIVED\",\"UNAUTHORIZED_TRANSACTION\"]},\"seller_receivable_breakdown\":{\"gross_amount\":{\"currency_code\":\"USD\",\"value\":\"22.98\"},\"paypal_fee\":{\"currency_code\":\"USD\",\"value\":\"0.97\"},\"net_amount\":{\"currency_code\":\"USD\",\"value\":\"22.01\"}},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/payments/captures/29B44561UF627130H\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v2/payments/captures/29B44561UF627130H/refund\",\"rel\":\"refund\",\"method\":\"POST\"},{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/60J70994M39520325\",\"rel\":\"up\",\"method\":\"GET\"}],\"create_time\":\"2021-07-09T19:26:33Z\",\"update_time\":\"2021-07-09T19:26:33Z\"}]}}],\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/60J70994M39520325\",\"rel\":\"self\",\"method\":\"GET\"}],\"id\":\"60J70994M39520325\",\"intent\":\"CAPTURE\",\"payer\":{\"name\":{\"given_name\":\"test\",\"surname\":\"buyer\"},\"email_address\":\"eathorne2012-buyer@yahoo.com\",\"payer_id\":\"QCEPS6HXTCW9N\",\"address\":{\"country_code\":\"US\"}},\"status\":\"COMPLETED\"},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-4U387217Y0402090W-29K29120XX664362Y\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-4U387217Y0402090W-29K29120XX664362Y/resend\",\"rel\":\"resend\",\"method\":\"POST\"}]}', 'CHECKOUT.ORDER.APPROVED', 22.98, 'COMPLETED', 'order 5', 'An order has been approved by buyer', 'test', 'buyer', 'eathorne2012-buyer@yahoo.com', 'QCEPS6HXTCW9N'),
+(3, '2021-07-13 10:19:20', 'WH-7T326909W98431811-0PA11016TB7979214', '{\"id\":\"WH-7T326909W98431811-0PA11016TB7979214\",\"event_version\":\"1.0\",\"create_time\":\"2021-07-13T10:18:33.518Z\",\"resource_type\":\"checkout-order\",\"resource_version\":\"2.0\",\"event_type\":\"CHECKOUT.ORDER.APPROVED\",\"summary\":\"An order has been approved by buyer\",\"resource\":{\"update_time\":\"2021-07-13T10:18:17Z\",\"create_time\":\"2021-07-13T10:17:05Z\",\"purchase_units\":[{\"reference_id\":\"default\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"1.05\",\"breakdown\":{\"item_total\":{\"currency_code\":\"USD\",\"value\":\"1.05\"},\"shipping\":{\"currency_code\":\"USD\",\"value\":\"0.00\"},\"tax_total\":{\"currency_code\":\"USD\",\"value\":\"0.00\"}}},\"payee\":{\"email_address\":\"eathorne2012-facilitator@yahoo.com\",\"merchant_id\":\"QKRY6BTWMQQ8C\"},\"description\":\"order 6\",\"shipping\":{\"name\":{\"full_name\":\"test buyer\"},\"address\":{\"address_line_1\":\"1 Main St\",\"admin_area_2\":\"San Jose\",\"admin_area_1\":\"CA\",\"postal_code\":\"95131\",\"country_code\":\"US\"}},\"payments\":{\"captures\":[{\"id\":\"1BE01178RF206244J\",\"status\":\"COMPLETED\",\"amount\":{\"currency_code\":\"USD\",\"value\":\"1.05\"},\"final_capture\":true,\"seller_protection\":{\"status\":\"ELIGIBLE\",\"dispute_categories\":[\"ITEM_NOT_RECEIVED\",\"UNAUTHORIZED_TRANSACTION\"]},\"seller_receivable_breakdown\":{\"gross_amount\":{\"currency_code\":\"USD\",\"value\":\"1.05\"},\"paypal_fee\":{\"currency_code\":\"USD\",\"value\":\"0.33\"},\"net_amount\":{\"currency_code\":\"USD\",\"value\":\"0.72\"}},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/payments/captures/1BE01178RF206244J\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v2/payments/captures/1BE01178RF206244J/refund\",\"rel\":\"refund\",\"method\":\"POST\"},{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/4PA73887R93208929\",\"rel\":\"up\",\"method\":\"GET\"}],\"create_time\":\"2021-07-13T10:18:17Z\",\"update_time\":\"2021-07-13T10:18:17Z\"}]}}],\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v2/checkout/orders/4PA73887R93208929\",\"rel\":\"self\",\"method\":\"GET\"}],\"id\":\"4PA73887R93208929\",\"intent\":\"CAPTURE\",\"payer\":{\"name\":{\"given_name\":\"test\",\"surname\":\"buyer\"},\"email_address\":\"eathorne2012-buyer@yahoo.com\",\"payer_id\":\"QCEPS6HXTCW9N\",\"address\":{\"country_code\":\"US\"}},\"status\":\"COMPLETED\"},\"links\":[{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-7T326909W98431811-0PA11016TB7979214\",\"rel\":\"self\",\"method\":\"GET\"},{\"href\":\"https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-7T326909W98431811-0PA11016TB7979214/resend\",\"rel\":\"resend\",\"method\":\"POST\"}]}', 'CHECKOUT.ORDER.APPROVED', 1.05, 'COMPLETED', 'order 6', 'An order has been approved by buyer', 'test', 'buyer', 'eathorne2012-buyer@yahoo.com', 'QCEPS6HXTCW9N');
 
 -- --------------------------------------------------------
 
@@ -285,23 +240,20 @@ CREATE TABLE `products` (
   `image3` varchar(500) DEFAULT NULL,
   `image4` varchar(500) DEFAULT NULL,
   `date` datetime NOT NULL,
-  `slag` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `slag` varchar(100) NOT NULL,
+  `data_inizio` date DEFAULT NULL,
+  `data_fine` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `user_url`, `description`, `category`, `brand`, `price`, `quantity`, `image`, `image2`, `image3`, `image4`, `date`, `slag`) VALUES
-(7, 'IYHtfbbTBkpFExy', 'Burger 250g With Drink', 1, 1, 9.99, 8, 'uploads/6f7bd4cc3677b6e4ce2aeb249bfa2c32.jpg', 'uploads/Burger.jpg', 'uploads/glenlivet-12.jpg', 'uploads/sogood-landing.jpg', '2021-03-16 19:36:12', 'burger-250g-with-drink'),
-(8, 'IYHtfbbTBkpFExy', 'Weet Bix 1.4 Kg', 1, 2, 20.99, 9, 'uploads/UT83WqLXMBXXXagOFbX9.jpg', 'uploads/getmedia_3dad7ab1-ce4b-40e7-b409-82013a7f2c4b_2020_Website_Title_WB.jpg width=760&height=460&ext=.jpg', 'uploads/banetti-foods.jpg', 'uploads/351396-01.jpg-1200Wx1200H.jpg', '2021-03-16 20:07:08', 'weet-bix-1-4-kg'),
-(9, 'IYHtfbbTBkpFExy', 'Milo Candy Bar', 1, 4, 12.99, 100, 'uploads/images.jpg', 'uploads/banetti-foods.jpg', '', '', '2021-03-16 20:16:54', 'milo-candy-bar'),
-(10, 'IYHtfbbTBkpFExy', 'Alcohol', 2, 2, 0.21, 6, 'uploads/yKqmWfrNPKYgOV4FLQHuzzi4iJnqaae09dQA2iedeffJCK7c9PSsVnSvjRIV.jpg', '', '', '', '2021-06-06 15:20:36', 'alcohol'),
-(11, 'IYHtfbbTBkpFExy', 'Meat Burger', 6, 3, 0.21, 6, 'uploads/mJVdNoskTywnobsA6A6mCaVCD7OJ8xxTl7cwV9Hth1O5Z0aiqDdA3stCYnQY.jpg', '', '', '', '2021-06-06 15:21:24', 'meat-burger'),
-(12, 'IYHtfbbTBkpFExy', 'Halo', 10, 3, 0.21, 6, 'uploads/UG8XjjVu7HTW1j6b4vfB9f2YqUVl0PbZ3WUXBU3LgXadugDVTCwua61u7Nrc.jpg', '', '', '', '2021-06-06 15:21:55', 'halo'),
-(13, 'IYHtfbbTBkpFExy', 'So Good', 2, 1, 0.21, 6, 'uploads/6evwk0NfONIp1SkN6Lzu0bprGHDUoJKA0RL3Fw6A6Epo6f9VQUAfB0YpN4w0.jpg', '', '', '', '2021-06-06 15:22:18', 'so-good'),
-(14, 'IYHtfbbTBkpFExy', 'Traditions', 11, 4, 0.21, 6, 'uploads/peCbYjssuVJWFRn5kS4w7AqZRimede6JLo2xRNAV264TTREC5abm9lpVQrfJ.jpg', '', '', '', '2021-06-06 15:24:01', 'tradition'),
-(15, 'IYHtfbbTBkpFExy', 'Some Product', 1, 7, 0.08, 6, 'uploads/gfSXekdGkmQhkHE2GXDe29Cm2PN6MqrKFfLf5TK1rljqbO3Pfqopz5km5bKe.jpg', '', '', '', '2021-06-16 19:13:37', 'some-product');
+INSERT INTO `products` (`id`, `user_url`, `description`, `category`, `brand`, `price`, `quantity`, `image`, `image2`, `image3`, `image4`, `date`, `slag`, `data_inizio`, `data_fine`) VALUES
+(1, 'dvd7Hmns5V', 'Biglietto Intero', 1, 1, 30, 50, 'uploads/ticket2.jpg', 'uploads/ticket3.jpg', 'uploads/ticket2.jpg', 'uploads/ticket3.jpg', '2024-04-15 07:51:13', 'biglietto-intero', NULL, NULL),
+(2, 'dvd7Hmns5V', 'Audioguida', 2, 1, 5, 125, 'uploads/audioguide.jpg', 'uploads/audioguide.jpg', 'uploads/audioguide.jpg', 'uploads/audioguide.jpg', '2024-04-15 07:51:13', 'audioguide-extra', NULL, NULL),
+(3, 'dvd7Hmns5V', 'Accompagnatore Riservato', 2, 3, 6, 5, 'uploads/guidaDisabili.jpg', 'uploads/guidaDisabili.jpg', 'uploads/guidaDisabili.jpg', 'uploads/guidaDisabili.jpg', '2024-04-30 15:16:40', 'Accompagnatore-disabili', NULL, NULL),
+(4, 'dvd7Hmns5V', 'Biglietto Esposizione 1', 1, 1, 15, 50, 'uploads/ticket4.jpg', 'uploads/ticket2.jpg', 'uploads/ticket1.jpg', 'uploads/ticket3.jpg', '2024-04-15 07:51:13', 'biglietto-esposizione-1', '2024-05-02', '2024-08-02');
 
 -- --------------------------------------------------------
 
@@ -314,22 +266,22 @@ CREATE TABLE `settings` (
   `setting` varchar(30) DEFAULT NULL,
   `value` varchar(2048) DEFAULT NULL,
   `type` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `settings`
 --
 
 INSERT INTO `settings` (`id`, `setting`, `value`, `type`) VALUES
-(1, 'phone_number', '+3867 676636 76373', ''),
-(2, 'email', 'info@mywebsite.com', ''),
+(1, 'phone_number', '+39 04985555', ''),
+(2, 'email', 'info@museomarte.com', ''),
 (3, 'facebook_link', 'https://www.facebook.com', ''),
 (4, 'twitter_link', 'https://www.twitter.com', ''),
-(5, 'linkedin_link', '', ''),
+(5, 'linkedin_link', 'https://www.linkedin.com/', ''),
 (6, 'google_plus_link', '', ''),
-(7, 'website_link', '', ''),
-(8, 'youtube_link', '', ''),
-(9, 'contact_info', 'E-Shopper Inc.\r\n\r\n<b>935 W. Webster Ave New Streets Chicago, IL 60614, NY</b>\r\n\r\nNewyork USA\r\n\r\nMobile: +2346 17 38 93\r\n\r\nFax: 1-714-252-0026\r\n\r\nEmail: info@e-shopper.com', 'textarea');
+(7, 'website_link', 'https://scuola.aledezzy.it/museum-ticket/public', ''),
+(8, 'youtube_link', 'https://www.youtube.com/', ''),
+(9, 'contact_info', 'Museo Marte\r\nITA\r\n\r\n\r\nEmail: info@museomarte.it', 'textarea');
 
 -- --------------------------------------------------------
 
@@ -346,39 +298,35 @@ CREATE TABLE `slider_images` (
   `image` varchar(500) DEFAULT NULL,
   `image2` varchar(500) DEFAULT NULL,
   `disabled` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `slider_images`
 --
 
 INSERT INTO `slider_images` (`id`, `header1_text`, `header2_text`, `text`, `link`, `image`, `image2`, `disabled`) VALUES
-(1, 'E-SHOP', 'Awesome Food', 'This food is awesome. try it and let me know what ya think', 'http://localhost/eshop/public/product_details/burger-250g-with-drink', 'uploads/TVqski4iWztdtAL1lTOYioOeV7L0XM767EyiWiZ5ZdzuOuZ9XhA6FE3rX3LK.jpg', '', 0),
-(2, 'E-SHOP STUFF', 'Milo Is The Best', 'As you already know Milo is awesome. everyone already knows its awesome', 'http://localhost/eshop/public/product_details/milo-candy-bar', 'uploads/gHmC5YMOwdiLKJFMH6mzr1pHGpNrLAS4gDtpK8zKhbXa639sJw5YJazX4LI0.jpg', '', 0),
-(3, 'Awesome Bix', 'This Is Great Food', 'The food on this picture is awesome. try it and let us know', 'http://localhost/eshop/public/product_details/weet-bix-1-4-kg', 'uploads/2hu6d0OKjiX0wrPuoj9GZoaDLUIKNa0Y8qkZr1CHol8NtkTRyTaKVj2389NN.jpg', '', 0);
+(1, 'Museo Marte', 'Guarda gli sconti e riduzioni!', 'Vieni a visitarci dal 25 aprile al 9 giugno!', 'http://localhost/eshop/public/', 'uploads/ticket.jpg', NULL, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `states`
+-- Table structure for table `specialcat`
 --
 
-CREATE TABLE `states` (
+CREATE TABLE `specialcat` (
   `id` int(11) NOT NULL,
-  `parent` int(11) NOT NULL,
-  `state` varchar(30) NOT NULL,
-  `disabled` tinyint(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `description` text NOT NULL,
+  `document` text NOT NULL,
+  `discount` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `states`
+-- Dumping data for table `specialcat`
 --
 
-INSERT INTO `states` (`id`, `parent`, `state`, `disabled`) VALUES
-(1, 1, 'Southern', 0),
-(2, 1, 'Nothern', 0),
-(3, 2, 'Sun City', 0),
-(4, 2, 'Burg', 0);
+INSERT INTO `specialcat` (`id`, `description`, `document`, `discount`) VALUES
+(0, 'Nessuna', '', 0),
+(1, 'DSA', 'Certificazione DSA', 10);
 
 -- --------------------------------------------------------
 
@@ -393,16 +341,20 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(64) NOT NULL,
   `date` datetime NOT NULL,
-  `rank` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `rank` varchar(8) NOT NULL,
+  `categories` int(11) NOT NULL,
+  `disable` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `url_address`, `name`, `email`, `password`, `date`, `rank`) VALUES
-(2, 'IYHtfbbTBkpFExy', 'Eathorne', 'eathorne@yahoo.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '2021-01-27 17:44:36', 'admin'),
-(3, 'BX8z7P6oUmwRDwR3yGlJdJH', 'Mary', 'mary@yahoo.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '2021-02-02 14:57:34', 'customer');
+INSERT INTO `users` (`id`, `url_address`, `name`, `email`, `password`, `date`, `rank`, `categories`, `disable`) VALUES
+(1, 'dvd7Hmns5V', 'Alessandro', 'ale@uda.it', 'd033e22ae348aeb5660fc2140aec35850c4da997', '2024-04-30 14:34:52', 'admin', 0, NULL),
+(2, 'Zg7jzgCxbQg6cB4mFc', 'd', 'd@d.it', '01464e1616e3fdd5c60c0cc5516c1d1454cc4185', '2024-04-29 09:34:38', 'customer', 0, NULL),
+(3, '1USntCLPNNv0sMCpiuw6nlPryskHxIzAltBYHyLkyThl93nXZdYnw9', 'Matteo', 'matteo@mail.it', '1e4e888ac66f8dd41e00c5a7ac36a32a9950d271', '2024-04-23 08:26:14', 'customer', 1, 0),
+(14, 'Vs9gawA8jlM51cB16mYLzcDXLY4xUndysNuABt16vR4HhIch7BxnF5', 'd', 'd@icloud.it', '01464e1616e3fdd5c60c0cc5516c1d1454cc4185', '2024-05-02 09:10:51', 'customer', 0, NULL);
 
 --
 -- Indexes for dumped tables
@@ -516,12 +468,10 @@ ALTER TABLE `slider_images`
   ADD KEY `disabled` (`disabled`);
 
 --
--- Indexes for table `states`
+-- Indexes for table `specialcat`
 --
-ALTER TABLE `states`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `parent` (`parent`),
-  ADD KEY `disabled` (`disabled`);
+ALTER TABLE `specialcat`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -532,7 +482,8 @@ ALTER TABLE `users`
   ADD KEY `email` (`email`),
   ADD KEY `name` (`name`),
   ADD KEY `rank` (`rank`),
-  ADD KEY `date` (`date`);
+  ADD KEY `date` (`date`),
+  ADD KEY `Utente` (`categories`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -560,25 +511,25 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `payments`
@@ -590,7 +541,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `settings`
@@ -605,16 +556,26 @@ ALTER TABLE `slider_images`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `states`
+-- AUTO_INCREMENT for table `specialcat`
 --
-ALTER TABLE `states`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `specialcat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `Utente` FOREIGN KEY (`categories`) REFERENCES `specialcat` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
