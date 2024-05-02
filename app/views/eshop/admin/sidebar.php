@@ -24,7 +24,7 @@
                   <li class="sub-menu">
                       <a <?=(isset($current_page) && $current_page == "products") ? ' class="active" ':''; ?> href="<?=ROOT?>admin/products" >
                           <i class="fa fa-barcode"></i>
-                          <span>Products</span>
+                          <span>Prodotti</span>
                       </a>
                      
                   </li>
@@ -32,7 +32,7 @@
                   <li class="sub-menu">
                       <a <?=(isset($current_page) && $current_page == "categories") ? ' class="active" ':''; ?> href="<?=ROOT?>admin/categories" >
                           <i class="fa fa-list-alt"></i>
-                          <span>Categories</span>
+                          <span>Categorie</span>
                       </a>
                        
                   </li>
@@ -40,7 +40,7 @@
                   <li class="sub-menu">
                       <a <?=(isset($current_page) && $current_page == "orders") ? ' class="active" ':''; ?> href="<?=ROOT?>admin/orders" >
                           <i class="fa fa-reorder"></i>
-                          <span>Orders</span>
+                          <span>Ordini</span>
                       </a>
                   
                   </li>
@@ -48,7 +48,7 @@
                   <li class="sub-menu">
                       <a <?=(isset($current_page) && $current_page == "messages") ? ' class="active" ':''; ?> href="<?=ROOT?>admin/messages" >
                           <i class="fa fa-email-o"></i>
-                          <span>Messages</span>
+                          <span>Messaggi</span>
                       </a>
                   
                   </li>
@@ -64,14 +64,14 @@
                   <li class="sub-menu">
                       <a <?=(isset($current_page) && $current_page == "settings") ? ' class="active" ':''; ?> href="<?=ROOT?>admin/settings" >
                           <i class="fa fa-cogs"></i>
-                          <span>Settings</span>
+                          <span>Impostazioni</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="<?=ROOT?>admin/settings/slider_images">Slider Images</a></li>
+                          <li><a  href="<?=ROOT?>admin/settings/slider_images">Gestisci slider home</a></li>
                       </ul>
 
                       <ul class="sub">
-                          <li><a  href="<?=ROOT?>admin/settings/socials">Social links / Contacts</a></li>
+                          <li><a  href="<?=ROOT?>admin/settings/socials">Social links / Contatti</a></li>
                       </ul>
 
                       
@@ -80,10 +80,10 @@
                   <li class="sub-menu">
                       <a <?=(isset($current_page) && $current_page == "users") ? ' class="active" ':''; ?> href="<?=ROOT?>admin/users" >
                           <i class="fa fa-user"></i>
-                          <span>Users</span>
+                          <span>Utenti</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="<?=ROOT?>admin/users/customers">Customers</a></li>
+                          <li><a  href="<?=ROOT?>admin/users/customers">Clienti</a></li>
                           <li><a  href="<?=ROOT?>admin/users/admins">Admins</a></li>
                        </ul>
                   </li>

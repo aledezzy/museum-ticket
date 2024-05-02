@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title><?= $data['page_title'] ?> | eShop</title>
+	<title><?= $data['page_title'] ?> | Museo</title>
 	<link href="<?= ASSETS . THEME ?>css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?= ASSETS . THEME ?>css/font-awesome.min.css" rel="stylesheet">
 	<link href="<?= ASSETS . THEME ?>css/prettyPhoto.css" rel="stylesheet">
@@ -37,7 +37,7 @@
 								<li><a href="#"><i class="fa fa-phone"></i> <?= Settings::phone_number() ?></a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> <?= Settings::email() ?></a></li>
 								<?php if (isset($data['user_data'])) : ?>
-									<li><a href="#"><i class="fa fa-user"></i> <?= $data['user_data']->name ?></a></li>
+									<li><a href="<?= ROOT ?>profile"><i class="fa fa-user"></i> <?= $data['user_data']->name ?></a></li>
 								<?php endif; ?>
 							</ul>
 						</div>

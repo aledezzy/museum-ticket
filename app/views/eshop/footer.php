@@ -13,8 +13,8 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
-							<img src="<?= ASSETS . THEME ?>images/home/map.png" alt="" />
-							<p>Italia</p>
+							<img src="<?= ASSETS . THEME ?>images/home/map2.png" alt="" />
+							<!--<p>Italia</p>-->
 						</div>
 					</div>
 				</div>

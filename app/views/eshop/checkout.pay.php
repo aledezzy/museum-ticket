@@ -19,7 +19,7 @@
         <div id="paypal-button-container"></div>
       </div>
     </div>
-  <script src="https://www.paypal.com/sdk/js?client-id=AR43Syo2JVFyeZGMKfOgt6V0y7_d34fELYEX8GfXnn37Ws7fPp8CbQ6fSYZjM3t-14xt4xC33cupGRpO&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=AXT93vtu9LmjVPLZGLAOxJH3qKOSs4fOIiRW2Mxa5oammYaLvMaF7nZg2cvDDLYk5SPuvJ5AeX-EZzwq&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
   <script>
     function initPayPalButton() {
       paypal.Buttons({

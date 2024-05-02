@@ -42,7 +42,7 @@
 	<div class="row mt"> 
                   <div class="col-md-12">
                       <div class="content-panel">
-                      	<h4>Advanced Search</h4>
+                      	<h4>Ricerca Avanzata</h4>
                       	 <!--searchbox-->
                       	 <style>
                       	 	.my-table{
@@ -61,24 +61,24 @@
                        	 					<td>
                        	 						<input value="<?php Search::get_sticky('textbox','description')?>" autofocus="true" type="text" class="form-control" name="description" placeholder="Type what to search for">
                        	 					</td>
-                       	 					<th>Category</th>
+                       	 					<th>Categoria</th>
                        	 					<td>
                        	 						<select class="form-control" name="category">
-                       	 							<option>--Select Category--</option>
+                       	 							<option>--Seleziona categoria--</option>
                        	 							<?php Search::get_categories('category')?>
                        	 						</select>
                        	 					</td>
                        	 				</tr>
                        	 			 
                        	 				<tr>
-                       	 					<th>Brands</th>
+                       	 					<th>Tipologia</th>
                        	 					<td colspan="3">
                         	 						<?php Search::get_brands()?>
                         	 				</td>
                        	 				</tr>
                        	 				
                        	 				<tr>
-                       	 					<th>Price</th>
+                       	 					<th>Prezzo</th>
                        	 					<td>
                        	 						<div class="form-inline" >
                        	 							<label>Min:</label>
@@ -87,7 +87,7 @@
                        	 							<input value="<?php Search::get_sticky('number','max-price')?>" class="form-control" type="number" step="0.01" name="max-price">
                        	 						</div>
                        	 					</td> 
-                       	 					<th>Quantity</th>
+                       	 					<th>Quantità</th>
                        	 					<td>
                        	 						<div class="form-inline" >
 	                       	 						<label>Min:</label>
@@ -99,38 +99,38 @@
                        	 				</tr>
                        	 			 
                        	 				<tr>
-                       	 					<th>Year</th>
+                       	 					<th>Anno</th>
                        	 					<td>
                        	 						<select class="form-control" name="year">
-                       	 							<option>--Select Year--</option>
+                       	 							<option>--Seleziona anno--</option>
                        	 							 <?php Search::get_years('year')?>
 
                        	 						</select>
                        	 					</td>
                        	 				</tr>
- 																<tr><td colspan="4"><input type="submit" name="search" value="Search" class="btn btn-success pull-right"></td></tr>
+ 										<tr><td colspan="4"><input type="submit" name="search" value="Search" class="btn btn-success pull-right"></td></tr>
                       	 		</table>
                       	 </form>
                       	 	
                       	 <!--end searchbox-->
 
                           <table class="table table-striped table-advance table-hover">
-	                  	  	  <h4><i class="fa fa-angle-right"></i> Products <button class="btn btn-primary btn-xs" onclick="show_add_new(event)"><i class="fa fa-plus"></i> Add New</button></h4>
+	                  	  	  <h4><i class="fa fa-angle-right"></i> Prodotti <button class="btn btn-primary btn-xs" onclick="show_add_new(event)"><i class="fa fa-plus"></i> Aggiungi nuovo</button></h4>
 	                  	  	  
 	                  	  	  <!--add new product-->
 	                  	  	  <div class="add_new add_edit_panel hide">
  	                  	  	   
-				                  <h4 class="mb"><i class="fa fa-angle-right"></i> Add New Product</h4>
+				                  <h4 class="mb"><i class="fa fa-angle-right"></i> Aggiungi nuovo</h4>
 			                      <form class="form-horizontal style-form" method="post">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Product Name:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Nome prodotto:</label>
 			                              <div class="col-sm-10">
 			                                  <input id="description" name="description" type="text" class="form-control" autofocus required>
 			                              </div>
 			                          </div>
 			                          <br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Quantity:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Quantità:</label>
 			                              <div class="col-sm-10">
 			                                  <input id="quantity" name="quantity" type="number" value="1" class="form-control" required>
 			                              </div>
@@ -138,7 +138,7 @@
 
 			                          <br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Category:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Categoria:</label>
 			                              <div class="col-sm-10">
 			                              	<select id="category" name="category"  class="form-control" required>
 			                              		<option></option>
@@ -154,7 +154,7 @@
 																
 																<br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Brand:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Tipo:</label>
 			                              <div class="col-sm-10">
 			                              	<select id="brand" name="brand"  class="form-control" required>
 			                              		<option></option>
@@ -170,7 +170,7 @@
 
 			                          <br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Price:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Prezzo:</label>
 			                              <div class="col-sm-10">
 			                                  <input id="price" name="price" type="number" placeholder="0.00" step="0.01" class="form-control" required>
 			                              </div>
@@ -178,28 +178,28 @@
 
 			                          <br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Image:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Img1:</label>
 			                              <div class="col-sm-10">
 			                                  <input id="image" name="image" type="file"  onchange="display_image(this.files[0],this.name,'js-product-images-add')" class="form-control" required>
 			                              </div>
 			                          </div>
  											<br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Image2 (optional):</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Img2 (optional):</label>
 			                              <div class="col-sm-10">
 			                                  <input id="image2" name="image2" type="file"  onchange="display_image(this.files[0],this.name,'js-product-images-add')" class="form-control" >
 			                              </div>
 			                          </div>
  											<br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Image3 (optional):</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Img3 (optional):</label>
 			                              <div class="col-sm-10">
 			                                  <input id="image3" name="image3" type="file"  onchange="display_image(this.files[0],this.name,'js-product-images-add')" class="form-control" >
 			                              </div>
 			                          </div>
  											<br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Image4 (optional):</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Img4 (optional):</label>
 			                              <div class="col-sm-10">
 			                                  <input id="image4" name="image4" type="file"  onchange="display_image(this.files[0],this.name,'js-product-images-add')" class="form-control" >
 			                              </div>
@@ -211,8 +211,8 @@
               	  	  						<img src="">
               	  	  					</div>		                          
               	  	  					
-              	  	  					<button type="button" class="btn btn-warning" onclick="show_add_new(event)" style="position:absolute;bottom:10px; left:10px;">Close</button>
-              	  	  					<button type="button" class="btn btn-primary" onclick="collect_data(event)" style="position:absolute;bottom:10px; right:10px;">Save</button>
+              	  	  					<button type="button" class="btn btn-warning" onclick="show_add_new(event)" style="position:absolute;bottom:10px; left:10px;">Chiudi</button>
+              	  	  					<button type="button" class="btn btn-primary" onclick="collect_data(event)" style="position:absolute;bottom:10px; right:10px;">Salva</button>
 			                   
 			                      </form>
  					           
@@ -223,17 +223,17 @@
 	                  	  	  <!--edit product-->
 	                  	  	  <div class="edit_product add_edit_panel hide" >
  	                  	  	   
-				                  <h4 class="mb"><i class="fa fa-angle-right"></i> Edit Product</h4>
+				                  <h4 class="mb"><i class="fa fa-angle-right"></i> Modifica prodotto</h4>
 			                      <form class="form-horizontal style-form" method="post">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Product Name:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Nome prodotto:</label>
 			                              <div class="col-sm-10">
 			                                  <input id="edit_description" name="description" type="text" class="form-control" autofocus required>
 			                              </div>
 			                          </div>
 			                          <br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Quantity:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Quantità:</label>
 			                              <div class="col-sm-10">
 			                                  <input id="edit_quantity" name="quantity" type="number" value="1" class="form-control" required>
 			                              </div>
@@ -241,7 +241,7 @@
 
 			                          <br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Category:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Categoria:</label>
 			                              <div class="col-sm-10">
 			                              	<select id="edit_category" name="category"  class="form-control" required>
 			                              		<option></option>
@@ -257,7 +257,7 @@
 
 			                          <br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Price:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Prezzo:</label>
 			                              <div class="col-sm-10">
 			                                  <input id="edit_price" name="price" type="number" placeholder="0.00" step="0.01" class="form-control" required>
 			                              </div>
@@ -265,28 +265,28 @@
 
 			                          <br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Image:</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Img:</label>
 			                              <div class="col-sm-10">
 			                                  <input id="edit_image" name="image" type="file" onchange="display_image(this.files[0],this.name,'js-product-images-edit')" class="form-control" required>
 			                              </div>
 			                          </div>
  											<br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Image2 (optional):</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Img2 (optional):</label>
 			                              <div class="col-sm-10">
 			                                  <input id="edit_image2" name="image2" type="file" onchange="display_image(this.files[0],this.name,'js-product-images-edit')" class="form-control" >
 			                              </div>
 			                          </div>
  											<br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Image3 (optional):</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Img3 (optional):</label>
 			                              <div class="col-sm-10">
 			                                  <input id="edit_image3" name="image3" type="file" onchange="display_image(this.files[0],this.name,'js-product-images-edit')" class="form-control" >
 			                              </div>
 			                          </div>
  											<br><br style="clear: both;">
 			                          <div class="form-group">
-			                              <label class="col-sm-2 col-sm-2 control-label">Image4 (optional):</label>
+			                              <label class="col-sm-2 col-sm-2 control-label">Img4 (optional):</label>
 			                              <div class="col-sm-10">
 			                                  <input id="edit_image4" name="image4" type="file" onchange="display_image(this.files[0],this.name,'js-product-images-edit')" class="form-control" >
 			                              </div>
@@ -307,14 +307,14 @@
 
                                <thead>
                               <tr>
-                                  <th>Product id</th>
-                                  <th>Product Name</th>
-                                   <th>Quantity</th>
-                                   <th>Category</th>
-                                   <th>Brand</th>
-                                   <th>Price</th>
-                                   <th>Date</th>
-                                  <th><i class=" fa fa-edit"></i> Action</th>
+                                  <th>Id prodotto</th>
+                                  <th>Nome prodotto</th>
+                                   <th>Qta</th>
+                                   <th>Categoria</th>
+                                   <th>Tipo</th>
+                                   <th>Prezzo</th>
+                                   <th>Data</th>
+                                  <th><i class=" fa fa-edit"></i> Img</th>
                               </tr>
                               </thead>
                               <tbody id="table_body">
@@ -679,7 +679,7 @@
 	function delete_row(id)
 	{
 
-		if(!confirm("Are you sure you want to delete this row?"))
+		if(!confirm("Sei sicuro dei voler eliminare la row?"))
 		{
 			return;
 		}
