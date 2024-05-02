@@ -6,10 +6,10 @@
 		</div>
 		<div class="content-404">
 			<img src="<?=ASSETS . THEME ?>images/404/404.png" class="img-responsive" alt="" style="max-width:200px;"/>
-			<h1><b>OPPS!</b> We Couldn’t Find this Page</h1>
-			<p>Uh... So it looks like you brock something. The page you are looking for has up and Vanished.</p>
-			<h2><a href="<?=ROOT?>">Bring me back Home</a></h2>
-		</div>
-	</div>
+					<h1><b>OPPS!</b> Non abbiamo trovato questa pagina</h1>
+					<p>Uh... Sembra che tu abbia rotto qualcosa. La pagina che stai cercando è scomparsa.</p>
+					<h2><a href="<?=ROOT?>">Torna alla pagina iniziale</a></h2>
+				</div>
+			</div>
 
 <?php $this->view("footer",$data); ?>
