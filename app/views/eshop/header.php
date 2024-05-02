@@ -35,7 +35,7 @@
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
 								<li><a href="#"><i class="fa fa-phone"></i> <?= Settings::phone_number() ?></a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> <?= Settings::email() ?></a></li>
+								<li><a href="mailto:<?=Settings::email() ?>"><i class="fa fa-envelope"></i> <?= Settings::email() ?></a></li>
 								<?php if (isset($data['user_data'])) : ?>
 									<li><a href="<?= ROOT ?>profile"><i class="fa fa-user"></i> <?= $data['user_data']->name ?></a></li>
 								<?php endif; ?>
