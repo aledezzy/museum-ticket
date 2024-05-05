@@ -5,10 +5,10 @@
 			<div class="row">
 				
 				<?php //$this->view("sidebar.inc",$data); ?>
-					
+
 				<div class="col-sm-9">
 					<div class="blog-post-area">
-						<h2 class="title text-center">Latest From our Blog</h2>
+						<h2 class="title text-center">Ultimi blog</h2>
 						
 						<?php if(isset($ROWS) && is_array($ROWS)):?>
 							<?php foreach($ROWS  as $row):?>
@@ -17,7 +17,7 @@
 									<h3><?=htmlspecialchars($row->title)?></h3>
 									<div class="post-meta">
 										<ul>
-											<li><i class="fa fa-user"></i><?=$row->user_data->name?></li>
+											<!--<li><i class="fa fa-user"></i><?=$row->user_data->name?></li>-->
 											<li><i class="fa fa-clock-o"></i><?=date("H:i a",strtotime($row->date))?></li>
 											<li><i class="fa fa-calendar"></i><?=date("M jS, Y",strtotime($row->date))?></li>
 										</ul>
@@ -33,7 +33,7 @@
 										<img src="<?=ROOT . $row->image?>" alt="<?=htmlspecialchars($row->title)?>">
 									</a>
 									<p><?=nl2br(htmlspecialchars(substr($row->post, 0,300)))?>...</p>
-									<a  class="btn btn-primary" href="<?=ROOT?>post/<?=$row->url_address?>">Read More</a>
+									<a  class="btn btn-primary" href="<?=ROOT?>post/<?=$row->url_address?>">Leggi di più</a>
 								</div>
 								<!--end single-blog-post-->
   							<?php endforeach;?>
