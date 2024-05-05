@@ -53,19 +53,19 @@
 		 
 					<div class="col-sm-8 clearfix">
 						<div class="bill-to">
-							<p>Bill To</p>
+							<p>Spedizione a</p>
 							<div class="form-one">
  									
-								<input name="address1" value="<?=$address1?>" class="form-control" type="text" placeholder="Address 1 *" autofocus="autofocus" required><br>
-								<input name="address2" value="<?=$address2?>" class="form-control" type="text" placeholder="Address 2"><br>
-								<input name="postal_code" value="<?=$postal_code?>" class="form-control" type="text" placeholder="Zip / Postal Code *" required><br>
+								<input name="address1" value="<?=$address1?>" class="form-control" type="text" placeholder="Indirizzo 1 *" autofocus="autofocus" required><br>
+								<input name="address2" value="<?=$address2?>" class="form-control" type="text" placeholder="Indirizzo 2"><br>
+								<input name="postal_code" value="<?=$postal_code?>" class="form-control" type="text" placeholder="Codice Postale *" required><br>
 								 
 							</div>
 							<div class="form-two">
 
 									<select name="country" class="js-country" oninput="get_states(this.value)" required>
 										<?php if($country == ""){
-											echo "<option>-- Country --</option>";
+											echo "<option>-- Paese --</option>";
 										}else{
 											echo "<option>$country</option>";
 										}?>
@@ -82,8 +82,8 @@
 
 									
 									 
-									<input name="home_phone" value="<?=$home_phone?>" class="form-control" type="text" placeholder="Home Phone"><br>
-									<input name="mobile_phone" value="<?=$mobile_phone?>" class="form-control" type="text" placeholder="Mobile Phone *" required><br>
+									<input name="home_phone" value="<?=$home_phone?>" class="form-control" type="text" placeholder="Telefono di casa"><br>
+									<input name="mobile_phone" value="<?=$mobile_phone?>" class="form-control" type="text" placeholder="Telefono *" required><br>
 									<br>
 									
 							</div>
@@ -91,11 +91,11 @@
 					</div>
 					<div class="col-sm-4" >
 						<div class="order-message">
-							<p>Shipping Order</p>
-							<textarea name="message"  placeholder="Notes about your order, Special Notes for Delivery" rows="16"><?=$message?></textarea>
+							<p>Spedizione</p>
+							<textarea name="message" placeholder="Note sul tuo ordine, Note speciali per la consegna" rows="16"><?=$message?></textarea>
 							 
-						</div>	
-					</div>					
+						</div>
+					</div>
 				</div>
 		 
  				<input type="submit" class="btn btn-warning pull-right" value="Continue >" name="">
@@ -111,7 +111,7 @@
 	<?php endif;?>
 
 			<a href="<?=ROOT?>cart">
-				<input type="button" class="btn btn-warning pull-left" value="< Back to cart" name="">
+				<input type="button" class="btn btn-warning pull-left" value="< Torna al carrello" name="">
 			</a>
 		</div>
 	</section> <!--/#cart_items-->
