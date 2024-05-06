@@ -77,8 +77,8 @@ Class Checkout extends Controller
 		$data['ROWS'] = $ROWS;
 
 		//get countries
-		$countries = $this->load_model('Countries');
-		$data['countries'] = $countries->get_countries();
+		//$countries = $this->load_model('Countries');
+		//$data['countries'] = $countries->get_countries();
 
 		//check if old post data exists
 		if(isset($_SESSION['POST_DATA'])){

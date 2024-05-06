@@ -1,7 +1,7 @@
 <?php 
 
 
-Class Countries{
+/*Class Countries{
 
 	public function get_countries(){
 
@@ -59,4 +59,4 @@ Class Countries{
 	
 
 	
-}
+}*/

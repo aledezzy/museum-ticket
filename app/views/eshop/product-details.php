@@ -88,19 +88,20 @@
 										<li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
 										<li><a href=""><i class="fa fa-calendar-o"></i>13 APR 2024</a></li>
 									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+									<p>Stupendo!</p>
 									<p><b>Scrivi la tua opinione!</b></p>
 									
-									<form action="#">
+									<form action="">
 										<span>
 											<input type="text" placeholder="Il tuo nome"/>
 											<input type="email" placeholder="Email"/>
 										</span>
 										<textarea name="" ></textarea>
 										
-										<button type="button" class="btn btn-default pull-right">
+										<button type="button" class="btn btn-default pull-right" onclick="alert('Grazie!')">
 											Manda
 										</button>
+									</form>
 									</form>
 								</div>
 							</div>
