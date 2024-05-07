@@ -63,46 +63,19 @@
 							</div>
 							<div class="form-two">
 
-									<select name="country" class="js-country" oninput="" required>
-										
+									<select name="country" class="js-country" oninput="get_states(this.value)" required>
 										<?php if($country == ""){
-											echo "<option>-- Seleziona il tuo paese --</option>";
-											}else{
-											echo "<option></option>";
+											echo "<option>-- Paese --</option>";
+										}else{
+											echo "<option>$country</option>";
 										}?>
-										<option value="Italia">Italia</option>
-										<option value="Francia">Francia</option>
-										<option value="Germania">Germania</option>
-										<option value="Spagna">Spagna</option>
-										<option value="Stati Uniti">Stati Uniti</option>
-										<option value="Regno Unito">Regno Unito</option>
-										<option value="Canada">Canada</option>
-										<option value="Australia">Australia</option>
-										<option value="Giappone">Giappone</option>
-										<option value="Olanda">Olanda</option>
-										<option value="Svizzera">Svizzera</option>
-										<option value="Svezia">Svezia</option>
-										<option value="Norvegia">Norvegia</option>
-										<option value="Danimarca">Danimarca</option>
-										<option value="Finlandia">Finlandia</option>
-										<option value="Belgio">Belgio</option>
-										<option value="Austria">Austria</option>
-										<option value="Portogallo">Portogallo</option>
-										<option value="Irlanda">Irlanda</option>
-										<option value="Nuova Zelanda">Nuova Zelanda</option>
-										<option value="Grecia">Grecia</option>
-										<option value="Polonia">Polonia</option>
-										<option value="Ungheria">Ungheria</option>
-										<option value="Repubblica Ceca">Repubblica Ceca</option>
-										<option value="Slovacchia">Slovacchia</option>
-										<option value="Slovenia">Slovenia</option>
-										<option value="Croazia">Croazia</option>
-										<option value="Bosnia ed Erzegovina">Bosnia ed Erzegovina</option>
-										<option value="Serbia">Serbia</option>
-										<option value="Montenegro">Montenegro</option>
-										<option value="Macedonia">Macedonia</option>
-										<option value="Albania">Albania</option>
-										<option value="Kosovo">Kosovo</option>
+										<?php if(isset($countries) && $countries):?>
+											<?php foreach ($countries as $row): ?>
+
+												<option value="<?=$row->country?>"><?=$row->country?></option>
+
+									 		<?php endforeach;?>
+									 	<?php endif;?>
 										
 										
 									</select><br><br>
