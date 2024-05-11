@@ -2,7 +2,9 @@
 # Gruppo Marte
 
 ## Gestione della biglietteria di un museo
-scuola.aledezzy.it/museum-ticket/public
+### Website:  scuola.aledezzy.it/museum-ticket/public
+
+
 Cosa si chiede di fare:
 Lavorando in gruppo con i tuoi compagni, pianificherai e realizzerai un progetto ipoteticamente commissionato da un museo che abbia deciso di realizzare un sistema informatico per la gestione della biglietteria online.
 La biglietteria online consentirà di acquistare i biglietti sia per la visita del museo (biglietto base) sia per le singole esposizioni tematiche (biglietto evento). La visita e le esposizioni sono caratterizzate da un codice identificativo, da un titolo, dalla tariffa ordinaria, dalle date di inizio e di fine (queste ultime non valorizzate nel caso della visita).
